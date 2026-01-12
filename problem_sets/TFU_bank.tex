@@ -1,0 +1,340 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\usepackage{xcolor}
+\usepackage{etoolbox}  %Supports toggle commands
+\definecolor{darkblue}{RGB}{0,0,139}
+\usepackage{graphicx}
+
+%SETTINGS
+\newtoggle{solutions} \toggletrue{solutions}
+
+\begin{document}
+
+\begin{center}
+\textbf{TFU Bank of Questions with Solutions} \\
+Introduction to Health Economics: EC 387 \\
+Boston University \\
+Spring 2026 \\
+Professor Pauline Mourot
+\end{center}
+
+\medskip
+
+\noindent \textbf{Exercise: TRUE/FALSE/UNCERTAIN}\\
+
+For each of the questions below, please explain your answer.
+The quality of the explanation is an important part of the grade for these problems and
+can also help you earn substantial partial credit.
+In answering each question, 1-3 sentences of explanation should be sufficient.
+
+\medskip
+
+
+\noindent \textbf{QUESTION 1}\\
+Most large firms choose self-insured health plans to offer to their employees because large firms typically attract healthier workers with lower expected healthcare costs.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+UNCERTAIN/FALSE – Large firms generally choose to self-insure so that they don't have to pay a risk premium since these firms are likely risk neutral. Smaller firms, who benefit less from the law of large numbers, may instead choose to fully insure. It is not clear that large firms generally attract healthier workers.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 2}\\
+While the overall amount of health care spending in the U.S. has increased substantially over the past several decades, health care spending in the U.S. as a percentage of GDP has remained roughly constant.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE, the health care sector's share of GDP has risen steadily from approximately 5\% in 1960 to nearly 18\% presently. See Lecture 1 - Slide 12 for the graphical depiction of this trend.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 3}\\
+Most individuals who qualify for Medicaid pay no monthly premium.
+Because of this, the actuarial value of Medicaid plans is higher than most private health insurance plans in the U.S.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE – Actuarial value is the population-average share of costs paid by the insurer. We get this value by calculating the insurer payments across all individuals and dividing this by the total costs for those individuals when they experience medical costs. Notably, premiums do not enter this calculation. Only deductibles and coinsurance rates matter.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 4}\\
+Suppose there are two health insurance plans that are otherwise identical (in terms of insurance premium, coinsurance rate, plan characteristics, etc.) except that one of the plans has a higher deductible. The high-deductible plan provides more overall financial protection to the consumer.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE – Recall that the deductible refers to the amount of money an individual must pay in a given year before the insurance plan starts to cover additional costs. Given that the two plans are identical in all other respects, this implies that the plan with the higher deductible requires the individual to pay more money out-of-pocket than the plan with the lower deductible. Therefore, the high-deductible plan provides less overall financial protection to the customer.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 5}\\
+Research from a randomized controlled trial of Medicaid in Oregon found that having health insurance decreases ER usage and increases the use of primary care physicians.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE / UNCERTAIN – The Oregon Health Experiment (Finkelstein et al. 2012, QJE) does find an increase in the use of primary care but found no significant effect on ER visits. Students might remember from the Week 1 slides that there is another study of Medicaid expansion that found a decrease in uninsured ER visits and a general increase in ER visits in expansion states. Answers referring to this study will also be accepted if they are well-reasoned.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 6}\\
+Most hospitals in the U.S. are for-profit hospitals, although some states do not have any for-profit hospitals.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE – Most hospitals in the U.S. are non-profit hospitals (about a fourth are for-profit while three-fourths are non-profits). Although, it is also true that some states, such as New York and Vermont, do not have any for-profit hospitals.
+}}{}
+
+\vspace{7mm}
+
+
+
+\noindent \textbf{QUESTION 7}\\
+The Oregon Health Insurance Experiment found that when uninsured individuals received Medicaid coverage, they were able to access primary care services and reduce their use of emergency room (ER) services.
+
+\medskip
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE.
+Although the Oregon Health Insurance Experiment did lead to a statistically significant increase in primary care utilization
+by uninsured individuals, it did not reduce their self-reported use of ER services.
+The authors' QJE (2012) study found no significant difference in ER usage on the extensive or intensive margins.
+There are at least two possible explanations for this result.
+First, it could be that people who previously went to the ER for non-emergency purposes continued
+to do so even after receiving Medicaid coverage, since there are no financial penalties imposed on people for doing this.
+Second, it could be that the experiment did not have sufficient power to detect a reduction in use of ER services.
+A follow-up study published in Science (2014) found a statistically significant increase in ER utilization
+as measured by ER records in Portland-area hospitals. Reference to either study is acceptable.
+}}{}
+
+\vspace{7mm}
+
+\medskip
+
+\noindent \textbf{QUESTION 8}\\
+The RAND Health Insurance Experiment found that patients cut back more on healthcare consumption when the coinsurance rate was higher,
+and these effects were particularly strong for conditions that can be managed at home with over-the-counter medication.
+
+\medskip
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE.
+Although the RAND Health Insurance Experiment found that patients reduced their healthcare consumption more
+when they faced a higher coinsurance rate,
+the effect was not significantly different for conditions that could be managed at home with over-the-counter medication.
+On average, patients with 25 percent coinsurance spent 20 percent less than those with free care,
+whereas patients with 95 percent coinsurance spent 30 percent less.
+To look for heterogeneity across patient conditions,
+the authors grouped the conditions into categories based on how effectively the conditions were able to be treated by outpatient care and therapies
+(managed at home with over-the-counter medication).
+They found that patients reduced their spending by similar amounts for conditions that were more or less manageable at home.
+}}{}
+
+\vspace{7mm}
+
+
+
+\noindent \textbf{QUESTION 9}\\
+Individuals who are risk averse should purchase insurance with low deductibles.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+TRUE/UNCERTAIN - Holding everything else constant, a risk-averse individual would prefer insurance with a low deductible, since as their risk aversion increases, they will want to insure a higher share of risk. However, low deductibles are only one input into an individual's expected utility. If low deductibles co-vary with the degree of cost-sharing, the out-of-pocket max, and the premium amount, we cannot say for certain whether individuals who are risk averse should purchase insurance with low deductibles without also knowing their likelihood of incurring different medical costs, their income, and their degree of risk aversion.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 10}\\
+Most large firms choose self-insured health plans to offer to their employees because large firms typically attract healthier workers with lower expected healthcare costs.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE - Most large firms choose self-insured health plans to offer to their employees because they have the resources to directly pay employee claims and to spread the risk of more costly claims across multiple employees. Additional benefits that large firms (and other firms) then access from self-insured plans are: more flexibility, reduced costs of insurance to the firm, they do not subject the firm to certain state requirements, and they allow the firm to get money back at the end of the year.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 11}\\
+Suppose there are two health insurance plans with different cost-sharing contracts. One plan (“Plan A”) has a fixed deductible, but no cost-sharing once the deductible has been met (i.e., zero coinsurance rate beyond the deductible). The other plan (“Plan B”) has no deductible but a constant coinsurance rate and no out-of-pocket maximum. A risk-averse individual will prefer Plan A because it has a higher actuarial value.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+UNCERTAIN - It is true that holding all else constant, a risk-averse individual will prefer a plan with more comprehensive coverage, and that plans with higher actuarial values have more comprehensive coverage on average. However, whether or not a risk-averse individual will prefer a given plan depends on the individual's degree of risk aversion, their income, and their likelihood of experiencing each state of the world, as well as the specific values of the deductible, coinsurance rate, premium, and OOP max. Furthermore, knowing only that Plan A has a fixed deductible and no cost-sharing is not sufficient to guarantee that it has a higher actuarial value than the constant coinsurance rate and no OOP max in Plan B. We do not know the size of the deductible, the size of the coinsurance rate, or the distribution of medical costs in the population, and these specific pieces of information are necessary for calculating the AV of each plan. Suppose, for example, that the coinsurance rate is very low, and the fixed deductible is very high, then we could come up with a reasonable utility function and set of parameters under which the individual would prefer Plan B to Plan A.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 12}\\
+Hospital charges are higher than transaction prices for privately-insured patients because of consumer cost-sharing.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE - Hospital charges are not higher than transaction prices for privately-insured patients because of consumer cost-sharing, but instead because of other factors like contract structure.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 13}\\
+Most individuals who qualify for Medicaid pay no monthly premiums. Because of this, the actuarial value of Medicaid plans is higher than most private health insurance plans in the US.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE - Premiums are not an input into actuarial values. AV refers to the percentage of total costs that a plan will cover on average for a given population, and is determined by the coinsurance rate, the OOP max, the deductible, and the distribution of medical costs in the population.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 14}\\
+Under value-based insurance design (VBID), insurance plans should be designed with different copayments for different types of healthcare.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+TRUE - VBID insurance plans are typically designed with the following differences in copayments for different types of healthcare: (1) lower coinsurance rates/copayments for important and valuable healthcare consumption; (2) higher coinsurance rates/copayments for wasteful healthcare consumption; (3) lower coinsurance rates/copayments for people with certain chronic conditions; (4) lower coinsurance rates/copayments after certain health events.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 15}\\
+If demand for healthcare is very inelastic, insurers can increase profits substantially by increasing coinsurance rates to reduce moral hazard.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+TRUE/UNCERTAIN. An inelastic demand means that quantities will not vary much when the price varies. Therefore, the monopolist can increase coinsurance rates to reduce moral hazard without losing too many consumers. However, note that it also means that coinsurance rates will have to increase a lot for consumers to avoid over-consuming, which may make this strategy less efficient, and profit gains more uncertain.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 16}\\
+Medicare shifted away from fee-for-service payments to a prospective reimbursement system in the 1980s. This change was associated with an increase in the average length-of-stay at acute care hospitals because the new payment system reduced hospitals' incentives to engage in “cream-skimming” of healthy patients.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE. The prospective reimbursement system decreased the length of stay hospitals. The issue was to set the correct incentives for long term care hospitals (LTCHs) so that they would not release patients “too early”, but also would not keep patients too long to maximize reimbursement.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 17}\\
+Suppose that after Spring Break, Chicago Booth decides to test all MBA students in the first week of class using a COVID-19 rapid antigen test. Since the test has a high specificity and low sensitivity, there will be more false positive results than false negative results.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+UNCERTAIN. Sensitivity corresponds to the true positive rate, so that a low sensitivity implies a low true positive rate. Furthermore, sensitivity = true positive / (true positive + false negative) so that false negative rate = 1 - sensitivity: the false negative rate will be high. Specificity corresponds to the true negative rate, which is equal to 1 minus the false positive rate, so that a high specificity implies a low false positive rate. However, the question asks about the number of cases and not the rate. Therefore, while the false negative rate will be high and false positive rate will be low, we cannot conclude about the number of false positive and false negative results without more information.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 18}\\
+Most of the variation across the US in average spending per privately-insured beneficiary is due to variation in prices across regions (rather than variation in utilization); within a region, average prices across hospitals are similar.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE. The variation is due to both variation in quantity (as in Medicare, cf Finkelstein, Gentzkow and Williams (2016)) and prices. Within a region, average prices vary a lot across hospitals (cf Cooper et al (2020)).
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 19}\\
+A rigorous randomized evaluation studying the Camden Coalition's innovative approach to treating “super-utilizers” found that the care model caused a large reduction in hospital readmissions relative to usual standards of care.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE. The RCT based on studying the Camden Coalition's innovative approach to treating “super-utilizers” (Finkelstein et al (2020)) actually found no statistically insignificant reductions in hospital readmissions relative to usual standard care.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 20}\\
+Asymmetric information in insurance markets (such as when consumers know more about their medical expenditure risks than insurers) leads to unraveling in insurance markets and uninsured individuals.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE/UNCERTAIN. In the exercise below, consumers know more than insurers about their risks and we only find partial unraveling. If risk aversion is strong, the risk premium could be high enough so that all consumers would be willing to buy insurance, and there would be no unravelling. Unraveling depends on the extent of adverse selection and risk aversion. However, insurers should have some information about the general distribution of risk in the population, even though they are unable to identify the risk of each specific patients.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 21}\\
+A monopolist insurer selling a single insurance contract will choose to sell insurance to everyone and avoid adverse selection altogether.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE/UNCERTAIN. While a monopolist does need to consider who is buying their plans and what the consumers' expected costs are, they may still be better off setting a higher price that only the highest cost consumers will purchase. The Week 2 slides show an example where choosing to sell to everyone would be unprofitable to the insurer whereas setting prices high enough to sell to a fraction of the market becomes profitable (see slide 20).
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 22}\\
+When a monopolist insurer faces an upward-sloping marginal cost curve because of differences in expected costs and risk aversion across individuals in the market, the profit-maximizing choice by the monopolist will result in adverse selection.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+FALSE. If the marginal cost curve is upward sloping, this means that as you lower prices, higher-risk consumers will sign on to the plan. This means that higher prices lead to a more favorable situation for the monopolist insurer, resulting in advantageous selection if anything.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 23}\\
+Physicians are more likely than non-physicians to deliver via C-section.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+False/Uncertain. The opposite is true. In the Johnson-Reehavi study in CA and TX, physicians at non-HMO hospitals were ~10\% less likely to have C-sections. In HMO hospitals this trend was not found.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 24}\\
+In 2012, a large health plan in MA dropped Partners (a “star” hospital), and this led many consumers to switch away from the plan because many consumers did not want to remain on a “narrow network” plan that did not provide access their preferred hospital.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+True. A large number of consumers switched away from the health plan that didn't have their preferred hospital. See Week 6 slides.
+}}{}
+
+\vspace{7mm}
+
+
+\noindent \textbf{QUESTION 25}\\
+Medicare shifted away from fee-for-service payments to a prospective reimbursement system in the 1980s. This change was associated with an increase in the average length-of-stay at acute care hospitals because the new payment system reduced hospitals' incentives to engage in “cream-skimming” of healthy patients.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+False. This actually resulted in lower length of stay (see the graph on slide 35 of Week 6 lectures). Cream-skimming is actually a problem in the new Medicare reimbursement system since hospitals will get paid a lump-sum for all services provided within a diagnosis-related group (DRG) and healthy patients who require only short hospital stays will net them more money.
+}}{}
+
+\vspace{7mm}
+
+
+
+\end{document}

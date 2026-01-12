@@ -1,0 +1,313 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+\usepackage{xcolor}
+\usepackage{graphics}  % Support for images/figures
+\usepackage{graphicx}  % Includes the \resizebox command
+\usepackage{grffile}
+\usepackage{url}	   % Includes \urldef and \url commands
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{pdflscape}
+\usepackage{afterpage}
+
+\newcommand\newbold[1]{\textcolor{maroon}{\textbf{#1}}}
+
+\definecolor{maroon}{RGB}{128,0,0} %Maroon 1 Pantone 202 defined at https://harris.uchicago.edu/files/harris.branding_identity_guidelines.final__0.pdf
+\definecolor{darkgraytext}{RGB}{60,60,60}       % dark gray for the text
+\definecolor{pdfbanner}{RGB}{169,180,173}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=maroon,
+    urlcolor=maroon,
+    citecolor=maroon
+}
+
+% Section and subsection headers
+\titleformat{\section}
+  {\color{maroon}\normalfont\Large\bfseries}
+  {\thesection}{1em}{}
+  
+\titleformat{\subsection}
+  {\color{maroon}\normalfont\normalsize\bfseries}
+  {\thesubsection}{1em}{}
+
+\setstretch{1.1}
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+
+\begin{document}
+
+\noindent \includegraphics[width=3cm]{./input/BOSTON_UNIV_186.eps}\\
+
+\noindent {\large \newbold{EC 387 - Introduction to Health Economics}}\\
+Spring 2026, Tuesdays Thursdays 9:30am -- 10:45am, Room: 685-725 Comm Ave CAS 226\\
+Class attributes: Quantitative Reasoning I (1 unit), Social Inquiry II (1 unit)
+
+\vspace{0.5em}
+\noindent\textcolor{gray}{\rule{\linewidth}{1pt}}
+\vspace{0.5em}
+
+\noindent
+\begin{tabularx}{\linewidth}{@{}l X l@{}}
+\textbf{Instructor:} Professor Pauline Mourot&
+& \textbf{TA:} Yunjie Song \\
+
+\textbf{Office:} 545 &
+& \textbf{Office:} \\
+
+\textbf{Email:} \email{pmourot@bu.edu}&
+& \textbf{Email:} \email{yjcsong@bu.edu} \\
+
+\textbf{Office hours:} &
+& \textbf{Office hours:}
+\end{tabularx}
+
+\vspace{0.3cm}
+
+\noindent \textit{It is a course requirement that you read this syllabus in its entirety
+within one day of the first class day, or on your first day of enrollment if a late add.}
+
+\section*{Course Description}
+
+%\subsection*{UNIVERSITY CATALOG COURSE DESCRIPTION}
+
+This course applies theoretical and empirical tools of microeconomics to the study of healthcare.
+This course will cover a broad range of topics including
+the demand for health and healthcare,
+the design and financing of health insurance,
+the effect of government regulations on the healthcare market,
+the behavior of medical care providers,
+the role of competition in the healthcare market,
+and the determinants of geographic variation in healthcare.
+We will rely on economic thinking to understand both
+the business landscape and the public policy conversation
+surrounding the market for healthcare in the United States.
+
+\subsection*{PRE-REQUISITES}
+
+The class will be reasonably difficult.
+You will be asked not just to solve numerical and graphical problems,
+but also to determine what economic models and graphical frameworks apply to the problem at hand.
+Intermediate Microeconomics (CASEC201) is an essential prerequisite for this course.
+
+\section*{How Will You Learn?}
+
+\subsection*{TEACHING MODALITY INFORMATION}
+
+This course will take place in person.
+There will be no alternative to in-person attendance, other than normal emergency accommodations.
+Assignments and worksheets will be available on Blackboard.
+It is your responsibility to check Blackboard frequently
+and also to ensure that your personal settings on Blackboard correctly
+route class announcements to your preferred email address.
+
+\subsection*{COMMUNICATION}
+
+The course Blackboard site can be found at Blackboard learn (learn.bu.edu).
+
+\section*{Course Requirements and Grading}
+
+\subsection*{COURSE MATERIALS}
+
+This course does not have a required textbook.
+However, it may be useful to reference the classic textbook
+\emph{Health Economics} by Bhattacharya, Hyde, and Tu (Palgrave MacMillan).
+ISBN-13: 978-1137029966, ISBN-10: 113702996X.
+This textbook provides a foundational treatment of many of the topics covered in the course.
+I also recommend the book 
+\emph{Better Health Economics} by Gross and Notowidigdo (University of Chicago Press).
+ISBN-13: 978-0226820330, ISBN-10: 0226820335.
+All other materials will be provided to you via the course page on Blackboard.
+
+\subsection*{CLASSROOM EXPECTATIONS}
+
+Attendance is mandatory.
+% Students that are repeatedly disruptive in the classroom (e.g., talking, producing noise from devices) will be asked to leave class.
+
+% \subsection*{WORKSHEETS}
+
+% Some lecture will be complemented by a short ``worksheet'' that will provide practice questions on the topics covered in class that day. These are different from homework. Worksheets will be graded only for completion. Your participation grade will be entirely based on your completion of these worksheets. You are free to collaborate fully with others, but you must each submit your own sheet where you have individually written, typed, or drawn your answers.
+
+% I will ask you to upload worksheets to Canvas. The deadline to do so will be midnight on the day after the class in which the worksheet was assigned. Worksheets will be posted on Canvas in advance of class, and I will also bring printed copies to class. You may either complete the worksheets directly on a tablet, or else complete them on paper and take photos (combined into one file) to upload to Canvas. In the latter case, I recommend you use an App like ``Tiny Scanner'' or similar.
+
+\subsection*{PROBLEM SETS}
+
+There will be \newbold{five graded problem sets}.
+The problem sets are \newbold{required}.
+
+\begin{itemize}
+    \item Problem sets should be written up clearly and concisely.
+    You can either type up your answers or clearly handwrite them and scan them.
+    You will submit your problem sets through the Blackboard website.
+
+    \item Your grade will be based on the remaining problem set grades after dropping
+    the lowest problem set grade.
+    Because of this policy,
+    no late problem sets will be accepted under any circumstances.
+    If an emergency prevents you from handing in a problem set assignment,
+    that will count as your dropped problem grade. 
+
+    \item You are encouraged to work with your classmates on the problem sets. 
+    However, you must hand in your own set of answers with explanations in your own words. 
+    If a problem requires calculations or math, you must show your own work. 
+    Identical copies of joint work are not acceptable.
+
+    \item Any questions about grading should be directed to the TA within one week
+    after the problem set is returned.
+    No re-grades will be considered beyond the one-week deadline.
+\end{itemize}
+
+
+
+\subsection*{EXAMS}
+
+There will be three exams:
+
+\begin{itemize}
+    \item Midterm 1: February 20, 9:30am -- 10:45 am (in class)
+    \item Midterm 2: April 3, 9:30am -- 10:45 am (in class)
+    \item Final: XX
+\end{itemize}
+
+\noindent You must attend the midterms as well as the final,
+since there are no make-up exams in this course. 
+Please check your schedules now to verify that you will be available during each exam.
+The final will be cumulative.
+If you miss the final exam, you will receive an incomplete for the course.
+
+\subsection*{WEIGHTS}
+
+\begin{center}
+\begin{tabular}{l c}
+Assessment & Percent of Total Grade \\
+\hline
+Problem Sets & 15\% \\
+Midterm 1 & 20\% \\
+Midterm 2 & 20\% \\
+Final & 40\% \\
+Participation & 5\%
+\end{tabular}
+\end{center}
+
+\subsection*{LATE WORK AND MAKING UP MISSED WORK}
+
+Problem sets are due at the beginning of the class period on the applicable date.
+Late assignments will not be accepted.
+This is an absolute policy.
+
+\subsection*{USE OF A CURVE}
+
+Final numerical grades will be transformed to letter grades with plusses and minuses
+based on your performance relative to the rest of the class.
+
+% \section*{+/- GRADING POLICY}
+
+% Letter grades include A, A-, B+, ... D, D-, F.
+
+\section*{Academic Conduct}
+It is the responsibility of every student to be aware of the Academic Conduct Code's contents
+and to abide by its provisions
+(see \url{http://www.bu.edu/academics/policies/academic-conduct-code}).
+Cases of suspected academic misconduct will be reported.
+
+\clearpage
+%\begin{landscape}
+\section*{Course schedule (tentative)}
+
+  \centering
+  \scriptsize
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabularx}{\linewidth}{l l X l l}
+  \hline
+  \textbf{Week} & \textbf{Date} & \textbf{Class} & \textbf{Readings} & \textbf{Problem sets} \\
+  \hline
+  
+  Week 1 
+  & Tu Jan 20 & Class 1 - Introduction &  &  \\
+  & Th Jan 22 & Class 2 - Introduction to the US healthcare system &  &  \\
+  
+%  \hline
+  Week 2
+  & Tu Jan 27 & Class 3 - Introduction to the US healthcare system \& Reminders &  &  \\
+  & Th Jan 29 & Class 4 - Demand for health &  &  \\
+  
+%  \hline
+  Week 3
+  & Tu Feb 3 & Class 5 - Demand for health insurance &  & PS1 due \\
+  & Th Feb 5 & Class 6 - Understanding a health insurance plan &  &  \\
+  
+%  \hline
+  Week 4
+  & Tu Feb 10 & Class 7 - Moral hazard I & READING 1 &  \\
+  & Th Feb 12 & Class 8 - Moral hazard II &  & PS2 due \\
+  
+%  \hline
+  Week 5
+  & Tu Feb 17 & \textit{No class (substitute Monday schedule)} &  &  \\
+  & Th Feb 19 & \textbf{MIDTERM 1} &  &  \\
+  
+%  \hline
+  Week 6
+  & Tu Feb 24 & Class 9 - Imperfect information and adverse selection &  &  \\
+  & Th Feb 26 & Class 10 - Empirical evidence on adverse selection &  &  \\
+  
+%  \hline
+  Week 7
+  & Tu Mar 3 & Class 11 - Imperfect information and adverse selection II &  &  \\
+  & Th Mar 5 & Class 12 - Imperfect information and adverse selection II &  & PS3 due \\
+  
+  \hline
+  \multicolumn{5}{c}{\textit{Spring Break}} \\
+  \hline
+  
+  Week 8
+  & Tu Mar 17 & Class 13 - Policy response under adverse selection & READING 2 &  \\
+  & Th Mar 19 & Class 14 - What does health insurance do? &  &  \\
+  
+%  \hline
+  Week 9
+  & Tu Mar 24 & Class 15 - Public insurance today - The ACA &  & PS4 due \\
+  & Th Mar 26 & Class 16 - Public insurance today - The uninsured & READING 3 &  \\
+  
+%  \hline
+  Week 10
+  & Tu Mar 31 & Review session &  &  \\
+  & Th Apr 2 & \textbf{MIDTERM 2} &  &  \\
+  
+%  \hline
+  Week 11
+  & Tu Apr 7 & Class 17 - Hospitals &  &  \\
+  & Th Apr 9 & Class 18 - Doctors and nurses & READING 4 &  \\
+  
+%  \hline
+  Week 12
+  & Tu Apr 14 & Class 19 - Provider payments I &  &  \\
+  & Th Apr 16 & Class 20 - Provider payments II &  &  \\
+  
+%  \hline
+  Week 13
+  & Tu Apr 21 & Class 21 - Pharmaceutical: R\&D and drug pricing &  &  \\
+  & Th Apr 23 & Class 22 - Antitrust &  & PS5 due \\
+  
+%  \hline
+  Week 14
+  & Tu Apr 28 & Class 23 - Geography of healthcare I & READING 5 &  \\
+  & Th Apr 30 & Class 24 - Geography of healthcare II &  &  \\
+  
+  \hline
+  \multicolumn{5}{c}{\textbf{FINAL}} \\
+  \hline
+  
+  \end{tabularx}
+
+%\end{landscape}
+\clearpage
+
+\end{document}

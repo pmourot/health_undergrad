@@ -1,0 +1,461 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\usepackage{xcolor}
+\usepackage{etoolbox}  %Supports toggle commands
+\definecolor{darkblue}{RGB}{0,0,139}
+
+%SETTINGS
+\newtoggle{solutions} \togglefalse{solutions}
+
+\begin{document}
+
+\begin{center}
+\textbf{Problem Set 2} \\
+Introduction to Health Economics: EC 387 \\
+Boston University \\
+Spring 2026 \\
+Professor Pauline Mourot
+\end{center}
+
+\vspace{1em}
+
+\noindent \textbf{Exercise 1: TRUE/FALSE/UNCERTAIN}\\
+
+For each of the questions below, please explain your answer.
+The quality of the explanation is an important part of the grade for these problems and
+can also help you earn substantial partial credit.
+In answering each question, 1-3 sentences of explanation should be sufficient.
+
+\vspace{7mm}
+\noindent \textbf{QUESTION 1}\\
+Individuals who are risk averse should purchase insurance with low deductibles.
+
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+\vspace{5mm}
+
+TRUE/UNCERTAIN - Holding everything else constant, a risk-averse individual would prefer insurance with a low deductible,
+since as their risk aversion increases, they will want to insure a higher share of risk.
+However, low deductibles are only one input into an individual's expected utility.
+If low deductibles co-vary with the degree of cost-sharing, the out-of-pocket max, and the premium amount,
+we cannot say for certain whether individuals who are risk averse should purchase insurance with low deductibles
+without also knowing their likelihood of incurring different medical costs, their income, and their degree of risk aversion. 
+}}{}
+
+\vspace{7mm}
+
+\noindent \textbf{QUESTION 2}\\
+Suppose there are two health insurance plans with different cost-sharing contracts.
+One plan (“Plan A”) has a fixed deductible, but no cost-sharing once the deductible has been met
+(i.e., zero coinsurance rate beyond the deductible).
+The other plan (“Plan B”) has no deductible but a constant coinsurance rate and no out-of-pocket maximum.
+A risk-averse individual will prefer Plan A because it has a higher actuarial value.
+
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+\vspace{5mm}
+
+UNCERTAIN - It is true that holding all else constant, a risk-averse individual will prefer a plan with more
+comprehensive coverage, and that plans with higher actuarial values have more comprehensive coverage on average.
+However, whether or not a risk-averse individual will prefer a given plan depends on the individual's degree of risk aversion,
+their income, and their likelihood of experiencing each state of the world, as well as the specific values of the deductible,
+coinsurance rate, premium, and OOP max.
+Furthermore, knowing only that Plan A has a fixed deductible and no cost-sharing is not sufficient
+to guarantee that it has a higher actuarial value than the constant coinsurance rate and no OOP max in Plan B.
+We do not know the size of the deductible, the size of the coinsurance rate, or the distribution of medical costs in the population,
+and these specific pieces of information are necessary for calculating the AV of each plan.
+Suppose, for example, that the coinsurance rate is very low, and the fixed deductible is very high,
+then we could come up with a reasonable utility function and set of parameters under which the individual would prefer Plan B to Plan A.
+}}{}
+
+\vspace{7mm}
+
+\noindent \textbf{QUESTION 3}\\
+The RAND Health Insurance Experiment found that patients cut back more on healthcare consumption when the coinsurance rate was higher,
+and these effects were particularly strong for conditions that can be managed at home with over-the-counter medication.
+
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+\vspace{5mm}
+
+FALSE.
+Although the RAND Health Insurance Experiment found that patients reduced their healthcare consumption more
+when they faced a higher coinsurance rate,
+the effect was not significantly different for conditions that could be managed at home with over-the-counter medication.
+On average, patients with 25 percent coinsurance spent 20 percent less than those with free care,
+whereas patients with 95 percent coinsurance spent 30 percent less.
+To look for heterogeneity across patient conditions,
+the authors grouped the conditions into categories based on how effectively the conditions were able to be treated by outpatient care and therapies
+(managed at home with over-the-counter medication).
+They found that patients reduced their spending by similar amounts for conditions that were more or less manageable at home.
+}}{}
+
+\vspace{7mm}
+
+\noindent \textbf{QUESTION 4}\\
+Most individuals who qualify for Medicaid pay no monthly premium.
+Because of this, the actuarial value of Medicaid plans is higher than most private health insurance plans in the U.S.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+
+FALSE – Actuarial value is the population-average share of costs paid by the insurer. We get this value by calculating the insurer payments across all individuals and dividing this by the total costs for those individuals when they experience medical costs. Notably, premiums do not enter this calculation. Only deductibles and coinsurance rates matter.
+}}{}
+
+\vspace{7mm}
+
+\noindent \textbf{Exercise 2: Insurance plans}\\
+
+\medskip
+
+Assume that an individual has income of \$50{,}000. The individual faces a variety of medical
+expenditure risks summarized by the following mutually exclusive outcomes:
+\begin{itemize}
+    \item With probability $p = 0.08$, the individual is hospitalized and faces total medical costs of \$20{,}000.
+    \item With probability $p = 0.20$, the individual is hospitalized and faces total medical costs of \$2{,}000.
+    \item With probability $p = 0.50$, the individual has a doctor visit and faces total medical costs of \$500.
+    \item With probability $p = 0.22$, the individual has no medical costs.
+\end{itemize}
+
+Assume that the individual has utility function
+\[
+u(y) = \sqrt{y},
+\]
+where $y$ is income net of out-of-pocket medical costs.
+
+Before facing this risk, the individual is deciding between two health insurance plans (Plan A and Plan B) and remaining uninsured.
+
+\medskip
+\noindent \textbf{[Plan A]}\\
+The individual pays a premium of \$1,350 for a health insurance plan with a deductible of
+\$5,000. After paying out-of-pocket costs up to that deductible, the individual is fully insured.
+
+\medskip
+\noindent \textbf{[Plan B]}\\
+The individual pays a premium of \$2,350 for a ``full insurance'' health insurance plan with no
+deductible (i.e., there are no out-of-pocket costs).
+
+\vspace{10mm}
+This problem set asks you to answer each of the following questions:
+
+\bigskip
+\noindent\textbf{a.} Compute the expected out-of-pocket cost to the individual when the individual is
+uninsured.
+\medskip
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+There are four states of the world $(i=\{1,2,3,4\})$ described by $\{p_i,\text{OOP}_i\}$ where $p_i$ is
+the probability of state $i$ and $\text{OOP}_i$ is the out-of-pocket cost in state $i$ when the
+individual is uninsured.
+
+The expected out-of-pocket cost is
+\begin{align*}
+\mathbb{E}(\text{OOP})
+&= \sum_{i=1}^{4} p_i \cdot \text{OOP}_i \\
+&= 0.08 \cdot \$20{,}000 + 0.2 \cdot \$2{,}000 + 0.5 \cdot \$500 + 0.22 \cdot \$0 \\
+&= \$2{,}250.
+\end{align*}
+The expected out-of-pocket cost when the individual is uninsured is \$2,250.
+}
+}{}
+
+\medskip
+\noindent\textbf{b.} Compute the expected cost and expected profit for each plan from the perspective of the
+firm selling the two plans (i.e., if the individual chooses Plan A, what is the expected cost
+and profit for the firm, and if the individual chooses Plan B, what is the expected cost and
+profit).
+\medskip
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+This is from the perspective of the firm.
+
+\textbf{Expected costs}:
+
+The firm is only responsible for out-of-pockets costs after the deductible has been
+paid.
+\begin{itemize}
+    \item The expected cost for firm A is
+    \begin{align*}
+    EC_A
+    &= 0.08 \cdot (\$20{,}000 - \$5{,}000) + 0.2 \cdot \$0 + 0.5 \cdot \$0 + 0.22 \cdot \$0 \\
+    &= \$1{,}200.
+    \end{align*}
+
+    \item The expected cost for firm B is
+    \begin{align*}
+    EC_B
+    &= 0.08 \cdot \$20{,}000 + 0.2 \cdot \$2{,}000 + 0.5 \cdot \$500 + 0.22 \cdot \$0 \\
+    &= \$2{,}250.
+    \end{align*}
+\end{itemize}
+
+\textbf{Expected profit} for firm $j$ can be expressed as
+\begin{equation*}
+\pi_j = \text{premium}_j - EC_j.
+\end{equation*}
+
+\begin{itemize}
+    \item Expected profit for firm A is
+    \begin{align*}
+    \pi_A &= \$1{,}350 - \$1{,}200 \\
+          &= \$150.
+    \end{align*}
+
+    \item Expected profit for firm B is
+    \begin{align*}
+    \pi_B &= \$2{,}350 - \$2{,}250 \\
+          &= \$100.
+    \end{align*}
+\end{itemize}
+}
+}{}
+
+\medskip
+\noindent\textbf{c.} Does the consumer prefer to remain uninsured, or does the consumer prefer to purchase
+Plan A or Plan B instead? Interpret intuitively your results in 1-3 sentences.
+\medskip
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+To answer this question, you need to compute the expected utility of the consumer when
+uninsured, when insured with plan A, and when insured with plan B.
+
+The expected utility of this consumer when chooses option $K$ $(K=\{\text{uninsured, plan A, plan B}\})$ is
+\begin{align*}
+\mathbb{E}(u)_K
+&= \sum_{i=1}^{4} p_i \cdot u\!\left(y_{i,K}\right) \\
+&= \sum_{i=1}^{4} p_i \cdot u\!\left(I - \text{OOP}_{i,K} - \text{premium}_K\right) \\
+&= \sum_{i=1}^{4} p_i \cdot \sqrt{I - \text{OOP}_{i,K} - \text{premium}_K},
+\end{align*}
+with $y_{i,K}$ the net income in state of the world $i$ when he chooses option $K$ and $I$ is the
+gross income.
+
+Note that the out-of-pocket cost in each state of the world with vary with the choice of
+insurance.
+
+We then have
+\begin{align*}
+\mathbb{E}(u)_{\text{UNINSURED}}
+&= 0.08 \cdot \sqrt{(\$50{,}000 - \$20{,}000)}
++ 0.2 \cdot \sqrt{(\$50{,}000 - \$2{,}000)}\\
+&+ 0.5 \cdot \sqrt{(\$50{,}000 - \$500)}
++ 0.22 \cdot \sqrt{\$50{,}000} \\
+&= 218.1107,
+\end{align*}
+
+\begin{align*}
+\mathbb{E}(u)_{\text{PLAN A}}
+&= 0.08 \cdot \sqrt{(\$50{,}000 - \$5{,}000 - \$1{,}350)}
++ 0.2 \cdot \sqrt{(\$50{,}000 - \$2{,}000 - \$1{,}350)} \\
+&\quad
++ 0.5 \cdot \sqrt{(\$50{,}000 - \$500 - \$1{,}350)}
++ 0.22 \cdot \sqrt{(\$50{,}000 - \$1{,}350)} \\
+&= 218.1517,
+\end{align*}
+
+\begin{align*}
+\mathbb{E}(u)_{\text{PLAN B}}
+&= 0.08 \cdot \sqrt{(\$50{,}000 - \$2{,}350)}
++ 0.2 \cdot \sqrt{(\$50{,}000 - \$2{,}350)}
++ 0.5 \cdot \sqrt{(\$50{,}000 - \$2{,}350)} \\
+&\quad
++ 0.22 \cdot \sqrt{(\$50{,}000 - \$2{,}350)} \\
+&= 218.2888.
+\end{align*}
+
+Therefore, we have
+\begin{equation*}
+\mathbb{E}(u)_{\text{PLAN B}} > \mathbb{E}(u)_{\text{PLAN A}} > \mathbb{E}(u)_{\text{UNINSURED}}.
+\end{equation*}
+
+The consumer's top choice is plan B that fully insures him for a high premium that he
+has to pay for sure: he prefers paying a fixed fee for sure rather than taking the gamble.
+However, he would prefer plan A rather than remaining uninsured: plan A offers him
+partial protection in the worst state of the world against a fixed fee that he would pay
+for sure, hence reducing the variance of the gamble he has to take.
+}
+}{}
+
+\medskip
+\noindent\textbf{d.} Does the answer to part (c) change if the consumer is risk neutral instead of risk averse?
+\medskip
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+Results above depend on the utility function of the consumer. The utility function
+$u(y)=\sqrt{y}$ is concave: it implies risk aversion for the consumer.
+
+If we had assumed a different utility function, results could have changed.
+For example, assume the consumer is risk neutral. A risk neutral utility function is
+for example $u(x)=x$.
+If you were to calculate the expected utility for each option, you would find that
+remaining uninsured would be the consumer'’'s top choice.
+}
+}{}
+
+\medskip
+\noindent\textbf{e.} What is the maximum amount the consumer is willing to pay for each plan? Compare the
+answer to part (a) to the maximum amount the consumer is willing to pay for Plan B.
+Which is larger? Interpret intuitively your results in 1-3 sentences.
+\medskip
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+The maximum amount of premium $x$ the consumer is willing to pay is the amount
+that would make him indifferent between remaining uninsured and taking the plan.
+The key is to get the equation right and to use a solver to solve the equation (you can
+use solvers such as online solvers like Wolfram alpha (\url{https://www.wolframalpha.com/input})
+or statistical software like R or Matlab which would take 3 lines of code).
+
+\medskip
+For plan A this corresponds to
+\begin{equation*}
+\mathbb{E}(u)_A = \mathbb{E}(u)_{\text{UNINSURED}}
+\end{equation*}
+\begin{align*}
+0.08 \cdot &\sqrt{(\$50{,}000 - \$5{,}000 - x)}
++ 0.2 \cdot \sqrt{(\$50{,}000 - \$2{,}000 - x)}\\
+&+ 0.5 \cdot \sqrt{(\$50{,}000 - \$500 - x)}
++ 0.22 \cdot \sqrt{(\$50{,}000 - x)}
+= 218.1107.
+\end{align*}
+The solution is $x=1{,}367.87$.
+
+\medskip
+For plan B this corresponds to
+\begin{equation*}
+\mathbb{E}(u)_B = \mathbb{E}(u)_{\text{UNINSURED}}.
+\end{equation*}
+\begin{align*}
+\sqrt{(\$50{,}000 - x)} &= 218.1107.
+\end{align*}
+The solution is $x=2{,}427.72$.
+
+In part a, we calculated the expected out-of-pocket cost to be \$2,250. Here, we find that
+the consumer is willing to pay a maximum amount of \$2,427.72 for plan B! The
+consumer is willing to pay more than his expected cost when uninsured to avoid taking
+the gamble! In other words, because the consumer is risk averse, he is willing to pay for
+certain a higher amount than his expected cost to avoid facing the risk of the gamble.
+
+}
+}{}
+
+\medskip
+\noindent\textbf{f.} At the maximum willingness-to-pay for each plan from part (e), which plan delivers
+higher expected profits to the firm? Interpret intuitively your results in 1-3 sentences.
+
+\medskip
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+Here, you have to re-calculate each plan'’'s profit as in b) but using the new premiums
+$p_A = 1{,}367.87$ and $p_B = 2{,}427.72$.
+
+Expected profit for firm $j$ can be expressed as
+\begin{equation*}
+\pi_j = \text{premium}_j - EC_j.
+\end{equation*}
+
+\begin{itemize}
+    \item Expected profit for firm selling Plan A is
+    \begin{align*}
+    \pi_A &= \$1{,}367.87 - \$1{,}200 \\
+          &= \$167.87.
+    \end{align*}
+
+    \item Expected profit for firm selling Plan B is
+    \begin{align*}
+    \pi_B &= \$2{,}427.72 - \$2{,}250 \\
+          &= \$177.72.
+    \end{align*}
+\end{itemize}
+
+Both plans yield higher profits at these premiums. Note that the profit for plan B
+increases a lot, and even gets higher than plan A's profits, contrary to our findings from
+question b). This is because for plan B at this premium fully exploits the consumer's risk
+aversion. The expected cost is lower than the maximum willingness to pay of the
+consumer to avoid the gamble entirely.
+}
+}{}
+
+% \medskip
+% \noindent\textbf{g.} Calculate the variance of medical costs for the individual (which is same as variance of
+% out-of-pocket medical costs when the individual is uninsured).
+% \medskip
+
+% \iftoggle{solutions}{{ \color{darkblue}
+
+% The formula for the variance is
+% \begin{align*}
+% V(X) &= \mathbb{E}\!\left((X-\mathbb{E}(X))^2\right) \\
+%      &= \sum_{i=1}^{4} p_i \cdot (x_i - \bar{x})^2,
+% \end{align*}
+% $X$ is your gamble that has four states with associated probabilities $p_i$,
+% outcome realizations $x_i$ and a mean outcome realization $\bar{x}=\mathbb{E}(X)=\sum_{i=1}^{4} p_i x_i$.
+
+% The variance of medical costs for the individual when the individual is uninsured is
+% \begin{align*}
+% V(X)
+% &= 0.08 \cdot (\$20{,}000 - \$2{,}250)^2
+%  + 0.2 \cdot (\$2{,}000 - \$2{,}250)^2
+%  + 0.5 \cdot (\$500 - \$2{,}250)^2
+%  + 0.22 \cdot (-\$2{,}250)^2 \\
+% &= 27{,}862{,}500.
+% \end{align*}
+% }
+
+% \medskip
+% \noindent\textbf{h.} Suppose the next year the individual now faces a slightly larger variance of their medical
+% costs (because probabilities above change slightly), but the expected medical costs for the
+% individual stay the same, and the details of both plans stay the same, as well (i.e., same
+% deductible and same premium). What happens to firm profits for each plan in this case?
+% Which plan does the consumer prefer to purchase in the next year?
+% \medskip
+
+% \iftoggle{solutions}{{ \color{darkblue}
+
+% The aim is to make you play with the probabilities of each state so that the variance
+% increases but the expected out-of-pocket cost stays the same.
+
+% A nice example is when the variance increases a lot: for example, probabilities
+% $(0.1,0.05,0.3,0.55)$. These were giving you the same expected out-of-pocket cost of \$2,250
+% but higher a higher variance of 35,212,500.
+
+% Since the expected out-of-pocket cost does not change as well as plan details (premium
+% and deductible), plan B'’'s profits remain unchanged as well as the utility the consumer
+% gets from it.
+
+% However, when the increase in variance is large, it increases the expected utility of the
+% consumer from plan A, which in that case becomes his preferred option. Comparing the
+% expected out-of-pocket cost when uninsured versus with plan A, you can see that the
+% expected out-of-pocket cost is reduced drastically with plan A even though it is mostly a
+% ``catastrophic plan'', i.e. it insures the consumer only for the worst case scenario, while
+% in the probabilities given at the beginning of this problem, the expected out of pocket
+% costs were not reduced as much with plan A. This increases the value of this plan to the
+% consumer when facing these new probabilities. Note also that the uninsured expected
+% utility of the consumer decreases slightly compared to the initial gamble.
+
+% However, plan A'’'s profits become negative and the plan is not profitable.
+% }
+
+\end{document}
