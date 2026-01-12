@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\usepackage{xcolor}
+\usepackage{etoolbox}  %Supports toggle commands
+\definecolor{darkblue}{RGB}{0,0,139}
+
+%SETTINGS
+\newtoggle{solutions} \togglefalse{solutions}
+
+\begin{document}
+
+\begin{center}
+\textbf{Week 3 - Solution class exercise} \\
+Introduction to Health Economics: EC 387 \\
+Boston University \\
+Spring 2026 \\
+Professor Pauline Mourot
+\end{center}
+
+\vspace{1em}
+
+The consumer has \$20,000 in income and her utility function is $u(x) = \sqrt(x)$.\\
+She faces health risks such that
+\begin{itemize}
+    \item[-] She has a 50\% chance of having no medical expenses
+    \item[-] She has a 40\% chance of having \$1,000 in medical expenses (mild illness)
+    \item[-] She has a 10\% chance of having \$10,000 in medical expenses (severe illness)
+\end{itemize}
+\vspace{3mm}
+
+She is considering buying a health insurance plan with
+\begin{itemize}
+    \item[-] A premium of \$1,000
+    \item[-] A deductible of \$500
+    \item[-] A coinsurance rate of 20\%
+\end{itemize}
+
+\textbf{Questions}:
+\begin{enumerate}
+    \item What is the consumer's expected out-of-pocket cost?
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    The expected out-of-pocket cost is
+    \begin{align*}
+    \mathbb{E}(\text{OOP})
+    &= 0.5 \times \$20{,}000 + 0.4 \times \$1{,}000 + 0.1 \times \$10,000\\
+    &= \$1{,}400.
+    \end{align*}
+    The expected out-of-pocket cost when the individual is uninsured is \$1,400.
+    }
+
+    \item What is the expected cost to the insurer?
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    The expected cost to the insurer is
+    \begin{align*}
+    \mathbb{E}(\text{Cost}_{insurer})
+    &= 0.5 \times \$0 + 0.4 \times \left( (\$1{,}000 - \$500) \times 0.8 \right) + 0.1 \times \left( (\$10{,}000 - \$500) \times 0.8 \right) \\
+    &= \$160 + \$760 \\
+    &= \$920.
+    \end{align*}
+    The expected cost to the insurer is \$920.
+    }
+
+    \item What is the expected profit to the insurer?
+
+    \vspace{3mm}
+    { \color{darkblue}
+    The expected profit to the insurer is
+    \begin{align*}
+    \mathbb{E}(\text{Profit}_{insurer})
+    &= \text{Premium} - \mathbb{E}(\text{Cost}_{insurer}) \\
+    &= \$1{,}000 - \$920 \\
+    &= \$80.
+    \end{align*}
+    The expected profit to the insurer is \$80.
+    }
+
+    \item What would be the actuarially fair price for this insurance plan?
+    \textit{Hint: the actuarially fair price is the premium that would give the insurer zero expected profit.}\\
+
+    \vspace{3mm}
+    { \color{darkblue}
+    The actuarially fair price for this insurance plan is equal to the expected cost to the insurer,
+    which we calculated in question 2:
+    \begin{align*}
+    \text{Actuarially fair price} = \mathbb{E}(\text{Cost}_{insurer}) = \$920.
+    \end{align*}
+    }
+
+    \item Does the consumer prefer to remain uninsured or to buy this insurance plan?
+
+    \vspace{3mm}
+    { \color{darkblue}
+    To determine the consumer's preference, we need to calculate the expected utility in both scenarios.
+    \begin{itemize}
+        \item Uninsured:
+        \begin{align*}
+        \mathbb{E}(U_{uninsured}) &= 0.5 \times \sqrt{20{,}000} + 0.4 \times \sqrt{20{,}000 - 1,000} + 0.1 \times \sqrt{20{,}000 - 10,000} \\
+        &\approx 135.8469.
+        \end{align*}
+
+        \item Insured:
+        \begin{align*}
+        \mathbb{E}(U_{insured}) &= 0.5 \times \sqrt{20{,}000 - \underbrace{1,000}_{\text{premium}}} \\
+        & + 0.4 \times \sqrt{20,000 - 500 - (1,000-500) \times 0.2 - \underbrace{1,000}_{\text{premium}}} \\
+        &+ 0.1 \times \sqrt{20{,}000 - 500 - (10,000-500) \times 0,2 - \underbrace{1,000}_{\text{premium}}} \\
+        &\approx 136.06.
+        \end{align*}
+    \end{itemize}
+    Since $\mathbb{E}(U_{insured}) > \mathbb{E}(U_{uninsured})$, the consumer prefers to buy this insurance plan.
+    }
+
+    \item What is the maximum premium the consumer would be willing to pay for this insurance plan?
+
+    \vspace{3mm}
+    { \color{darkblue}
+    Let $P_{max}$ be the maximum premium the consumer is willing to pay.
+    We need to solve for $P_{max}$ such that the expected utility when insured
+    equals the expected utility when uninsured:
+    \begin{align*}
+    & \mathbb{E}(U_{insured, P_{max}}) = \mathbb{E}(U_{uninsured})\\
+    \leftrightarrow &0.5 \times \sqrt{20{,} - P_{max}} + 0.4 \times \sqrt{20,000 - 500 - (1000-500) \times 0.2 - P_{max}} \\
+    &\text{  }+ 0.1 \times \sqrt{20{,}000 - 500 - (10,000-500) \times 0,2 - P_{max}} \approx 135.8469\\
+    \end{align*}
+
+    You can solve this equation numerically using Wolfram alpha (\url{https://www.wolframalpha.com/input}) or statistical softwares like R.
+    Solving this equation numerically, we find that $P_{max} \approx 1,058.74$.
+    }
+
+\end{enumerate}
+
+
+
+
+\end{document}

@@ -5,6 +5,6 @@ Boston University
 Spring 2026  
 
 **Logistics**  
-Class schedule: Mondays Wednesdays 2:00 PM - 3:15 PM  
+Class schedule: Tuesdays Thursdays 9:30am – 10:45am  
 Email: pmourot@bu.edu  
 Office: 545  

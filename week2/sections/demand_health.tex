@@ -1,0 +1,275 @@
+%---------------------------------------------------------------------
+\begin{frame}{}
+
+    \begin{center}
+        \Large \textcolor{maroon}{The Grossman model (1972)}
+        \end{center}
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{}
+
+    Picture first page of article
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{What is \textit{health}?}
+
+    \begin{itemize}
+        \item Something we enjoy: a \newbold{consumption good}
+        \pause
+        \item Something we invest in: a \newbold{capital good}
+        \pause
+        \item Something that affects our ability to work: an \newbold{input} in production of productive time
+
+    \end{itemize}
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Single-period utility}
+
+    Utility
+    \begin{equation*}
+        U = U\left( H_t, Z_t \right)
+    \end{equation*}
+    where
+    \begin{itemize}
+        \item $H_t$ is the level of health at time $t$
+        \item $Z_t$ is a composite consumption good at time $t$
+    \end{itemize}
+
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Single-period time constraint}
+
+    An individual's activity:
+    \begin{itemize}
+        \item Spends time working (and earns a wage $w$ from it): $T^w$
+        \item Spends time consuming the composite good $Z$: $T^Z$
+        \item Spends time investing in health $H$: $T^H$
+        \item If sick, needs to rest in bed and cannot do anything else: $T^s$
+    \end{itemize}
+    \vspace{3mm}
+
+    Time constraint:
+    \begin{equation*}
+        \Theta = T^w + T^Z + T^H + T^s
+    \end{equation*}
+    where $\Theta$ is total available time in a period.
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Stock versus flow}
+
+    \begin{equation*}
+        U = U\left( H_t, Z_t \right)
+    \end{equation*}
+
+    Note:
+    \begin{itemize}
+        \item $Z_t$ is a \textit{flow}
+        \item $H_t$ is a \newbold{stock}
+    \end{itemize}
+    $\implies$ How do you produce them?
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Production}
+
+    Production functions:
+    \begin{itemize}
+        \item Health:
+        \begin{equation*}
+            H_t = H\left(H_{t-1}, T_t^H, M_t \right)
+        \end{equation*}
+        where
+        \begin{itemize}
+            \item $H_{t-1}$ is health stock from previous period
+            \item $T_t^H$ is time invested in health this period
+            \item $M_t$ are market inputs invested in health (e.g., vaccine, treadmill)
+        \end{itemize}
+        \pause
+        \item Composite good:
+        \begin{equation*}
+            Z_t = Z\left( T_t^Z, J_t \right)
+        \end{equation*}
+        where
+        \begin{itemize}
+            \item $T_t^Z$ is time invested in consuming $Z$
+            \item $J_t$ are market inputs invested in consuming $Z$ (e.g., food, video games)
+        \end{itemize}
+    \end{itemize}
+    $\implies$ Health is a stock: previous period's stock enters the production function//
+    $\implies$ You need time to get both consumption and health!
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Another constraint: the budget constraint}
+
+    Time constraint \textit{(which we already saw)}:
+    \begin{equation*}
+        \Theta = T^w + T^Z + T^H + T^s
+    \end{equation*}
+    \vspace{3mm}
+    \pause
+
+    \only<1>{Budget constraint:
+    \begin{equation*}
+        p_M M_t + p_J J_t \leq w T^w
+    \end{equation*}
+    where
+    \begin{itemize}
+        \item $p_M$ is the price of market inputs for health
+        \item $p_J$ is the price of market inputs for consumption
+        \item $w$ is the wage rate
+    \end{itemize}
+    }
+
+    \only<2>{Budget constraint:
+    \begin{equation*}
+        p_M M_t + p_J J_t \textcolor{red}{=} w T^w
+    \end{equation*}
+    (no \textcolor{red}{saving/borrowing})}
+
+    \only<3>{Budget constraint:
+    \begin{equation*}
+        p_M M_t + p_J J_t = w T^w
+    \end{equation*}
+    \vspace{3mm}
+
+    Note: the two constraints are \newbold{not independent}.
+    }
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Health and time sick}
+
+    Productive time:
+    \begin{align*}
+        T^p &= \Theta - T^s\\
+            &= T^w + T^Z + T^H
+    \end{align*}
+    \vspace{3mm}
+
+    Time sick is a function of health stock:
+    ADD graphics
+    \pause
+    \begin{itemize}
+        \item Better health $\implies$ less time sick
+        \item \newbold{Diminishing marginal returns}
+        \item Where is \textit{death}? $H_min$
+    \end{itemize}
+
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Production possibility frontier of $Z$ and $H$}
+
+    ADD FIGURE 3.2 and 3.3 from book
+
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Single-period optimal production}
+
+    ADD FIGURE 3.4 + exotic indifference curves
+
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Optimal time working?}
+
+    Fix $T^H$ for a minute
+
+    ADD FIGURE 3.8 from book
+
+    Now assume $H_t$ is larger:
+    ADD figure 3.9
+
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Multi-period model}
+
+    Assume multi-period utility as
+    \begin{align*}
+        U &= U(H_0, Z_0) + \delta U(H_1, Z_1) + \delta^2 U(H_2, Z_2) + \ldots + \delta^T U(H_T, Z_T)\\
+          &=\sum_{t=0}^{T} \delta^t U\left( H_t, Z_t \right)
+    \end{align*}
+    where $\delta$ is the discount factor.
+    \vspace{3mm}
+    \pause
+
+    Health as an investment good: introduce \textit{aging}
+    \begin{equation*}
+        H_t = H\left((1 - \gamma)H_{t-1}, T_t^H, M_t \right)
+    \end{equation*}
+    where $\gamma$ is the \newbold{depreciation rate} of health.
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Lifetime return to a marginal investment in health}
+
+    ADD Figure 3.10
+
+    ADD Figure 3.11
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Aging}
+
+    How to think about aging? change $\gamma$
+
+    ADD Figure 3.13
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Relationship between SES and health}
+
+    Take some graphs from slides of Vicky
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Using the Grossman model to think about the SES gradient in health}
+
+    ADD Figure 3.12
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{}
+
+    \begin{center}
+        \Large \textcolor{maroon}{Let's go to worksheet 1}
+        \end{center}
+\end{frame}
+%---------------------------------------------------------------------
+%---------------------------------------------------------------------
+\begin{frame}{}
+    \begin{center}
+    \Large \textcolor{maroon}{Wraping up}
+    \end{center}
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{What we covered today}
+    
+    \newbold{Demand for health: the Grossman model (1972)}
+    \begin{itemize}
+        \item Aging
+        \item SES and health
+    \end{itemize}
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{To next class}
+    \begin{itemize}
+        \item \newbold{TO DO}
+        \begin{enumerate}
+            \item Finish worksheet 1 $\implies$ \textit{questions on it?}
+            \item Review past material $\implies$ \textit{questions on it?}
+        \end{enumerate}
+        \vspace{5mm}
+
+        \item Program for next class
+        \begin{itemize}
+            \item Health insurance
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+%---------------------------------------------------------------------
