@@ -1,0 +1,378 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\usepackage{xcolor}
+\usepackage{etoolbox}  %Supports toggle commands
+\definecolor{darkblue}{RGB}{0,0,139}
+
+%SETTINGS
+\newtoggle{solutions} \togglefalse{solutions}
+
+\begin{document}
+
+\begin{center}
+\textbf{Midterm Exam 1} \\
+Introduction to Health Economics: EC 387 \\
+Boston University \\
+Spring 2026 \\
+Professor Pauline Mourot
+\end{center}
+
+\vspace{1em}
+
+[ADD DISCLAIMER EXAM]
+
+\noindent \textbf{PART I: TRUE/FALSE/UNCERTAIN [56 points]}\\
+
+For each of the questions below, please explain your answer.
+The quality of the explanation is an important part of the grade for these problems and
+can also help you earn substantial partial credit.
+In answering each question, 1-3 sentences of explanation should be sufficient.
+
+\vspace{7mm}
+
+[ADD 5 TFU QUESTIONS, 7 questions total at 8 points each]
+
+
+\noindent \textbf{QUESTION}\\
+A risk-averse individual has a lottery ticket that would give them \$0 with 50\% probability and \$1,000 with 50\% probability.
+They would prefer to take \$500 (for sure) instead of keeping the lottery ticket. 
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+TRUE
+
+}}{}
+
+\vspace{7mm}
+
+\noindent \textbf{QUESTION}\\
+A risk-averse individual has a lottery ticket that would give them \$0 with 50\% probability and \$5,000 with 50\% probability.
+They would prefer to take \$2,400 (for sure) instead of keeping the lottery ticket.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+UNCERTAIN - Not enough information is provided.
+
+}}{}
+
+\vspace{7mm}
+
+
+\vspace{10mm}
+
+\noindent \textbf{PART II: Quantitative Exercises [44 points]}\\
+
+\vspace{5mm}
+
+\noindent \textbf{Exercise 1 [12 points]}\\
+
+Tony faces uncertainty about his health state next year.
+There is a 80\% chance he will be perfectly healthy and have \$0 in medical bills,
+but there is a 20\% chance he will get sick and have \$4,000 in medical bills.
+His current wealth is \$12,000. His preferences are represented by the utility function
+
+\begin{equation*}
+U(w) = \sqrt{w}.
+\end{equation*}
+
+\medskip
+
+\noindent \textbf{(a)} If he does not have insurance, what is Tony's expected wealth next year?
+
+\iftoggle{solutions}{
+{\color{darkblue}
+\begin{align*}
+E[w] &= 0.8 \times 12000 + 0.2 \times (12000 - 4000)\\
+& = 11,200
+\end{align*}
+}}{}
+
+\medskip
+
+\noindent \textbf{(b)} If he does not have insurance, what is Tony's expected utility next year?
+(round to the nearest decimal place)
+
+\iftoggle{solutions}{
+{\color{darkblue}
+\begin{align*}
+E[U(w)] & = 0.8 \times \sqrt{12000} + 0.2 \times \sqrt{12000 - 4000}\\
+& = 105.5
+\end{align*}
+}}{}
+
+\medskip
+
+\noindent \textbf{(c)} If he does not have insurance,
+what is Tony's certainty equivalent next year?
+(round to the nearest decimal place)
+
+\iftoggle{solutions}{
+{\color{darkblue}
+\begin{align*}
+U(CE) &= E[U(w)] \\
+\sqrt{CE} &= 105.5 \\
+CE &= 11,130.3
+\end{align*}
+}}{}
+
+\medskip
+
+\noindent \textbf{(d)} What would Tony's certainty equivalent be under a full insurance plan with a premium of \$3,000?
+
+\iftoggle{solutions}{
+{\color{darkblue}
+\begin{equation*}
+CE = 12000 - 3000 = 9000
+\end{equation*}
+}}{}
+
+\medskip
+
+\textbf{(e)} Would Tony be willing to purchase a full insurance plan with a premium of \$2,000?
+
+\iftoggle{solutions}{
+{\color{darkblue}
+Expected utility if purchase is
+
+\begin{equation*}
+U = \sqrt{10000} = 100 < 105.5,
+\end{equation*}
+
+so no.
+}}{}
+
+\medskip
+
+\textbf{(f)} What would the actuarially fair premium for a full insurance plan for Tony be?
+
+\iftoggle{solutions}{
+{\color{darkblue}
+\begin{equation*}
+0.8 \times 0 + 0.2 \times 4000 = 800
+\end{equation*}
+}}{}
+
+
+\vspace{5mm}
+
+\noindent \textbf{Exercise 2 [24 points]}\\
+Assume that an individual has income of \$80,000. The individual faces a risk of hospitalization,
+which occurs with probability $p = 0.1$.
+If this happens, the total cost will be \$15,000.
+The individual's utility over income net of out-of-pocket medical costs is
+
+\begin{equation*}
+u(y) = \sqrt{y}.
+\end{equation*}
+
+Before facing the risk, the individual is deciding between two health insurance plans (Plan A and Plan B)
+and remaining uninsured.
+
+\medskip
+
+\textbf{Plan A:}  
+The individual pays a premium of \$1,050 (whether she shows up in the hospital or not) for a health insurance plan
+with a deductible of \$5,000.
+After paying out-of-pocket costs up to that deductible, the individual is fully insured.
+
+\medskip
+
+\textbf{Plan B:}  
+The individual pays a premium of \$1,560 (whether she shows up in the hospital or not) for a health insurance plan
+with no deductible and full insurance (so there are no out-of-pocket costs at all).
+
+\medskip
+
+\textbf{(a)} From the perspective of the firm, compute the expected cost and the expected profit to the insurer
+from selling each plan.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+Firm expected costs are how much they should expect to pay out. In the fully insured plan, this aligns with the consumer’s expected cost. In the plan with a deductible, the firm pays less than the full amount because of the deductible. Expected profits are the premiums minus the expected costs.
+
+Plan A:
+
+\begin{align*}
+\text{Expected costs} &= 0.1 \times (15000 - 5000) = 1000 \\
+\text{Expected profits} &= 1050 - 1000 = 50
+\end{align*}
+
+Plan B:
+
+\begin{align*}
+\text{Expected costs} &= 0.1 \times 15000 = 1500 \\
+\text{Expected profits} &= 1560 - 1500 = 60
+\end{align*}
+}}{}
+
+\medskip
+
+\textbf{(b)} Does the consumer prefer to purchase Plan A, to purchase Plan B, or to remain uninsured?
+
+\iftoggle{solutions}{
+{\color{darkblue}
+To calculate consumer preferences, we use the utility function to calculate the consumer's expected utility
+under each of the plans.
+
+Uninsured:
+\begin{equation*}
+E[U] = 0.1 \times \sqrt{80000 - 15000} + 0.9 \times \sqrt{80000} = 280.0535
+\end{equation*}
+
+Plan A:
+\begin{equation*}
+E[U] = 0.1 \times \sqrt{80000 - 5000 - 1050} + 0.9 \times \sqrt{80000 - 1050} = 280.0761
+\end{equation*}
+
+Plan B:
+\begin{equation*}
+E[U] = \sqrt{80000 - 1560} = 280.0714
+\end{equation*}
+
+The consumer prefers to insure themselves. Further, they prefer Plan A to Plan B.
+}}{}
+
+\medskip
+
+\textbf{(c)} Does the answer to part (b) change if the consumer is risk-neutral?
+
+\iftoggle{solutions}{
+{\color{darkblue}
+Now consider a risk-neutral utility function:
+
+\begin{equation*}
+u(y) = y.
+\end{equation*}
+
+Uninsured:
+\begin{equation*}
+E[U] = 0.1 \times (80000 - 15000) + 0.9 \times 80000 = 78500
+\end{equation*}
+
+Plan A:
+\begin{equation*}
+E[U] = 0.1 \times (80000 - 5000 - 1050) + 0.9 \times (80000 - 1050) = 78450
+\end{equation*}
+
+Plan B:
+\begin{equation*}
+E[U] = 80000 - 1560 = 78440
+\end{equation*}
+
+Now the consumer prefers being uninsured to paying for an insurance plan. Intuitive explanations here are also accepted.
+}}{}
+
+\medskip
+
+\textbf{(d)} Suppose the government decides to make all high-deductible plans (such as Plan A) illegal.
+If Plan A is eliminated, would the consumer prefer Plan B or prefer remaining uninsured?
+Provide intuition for your answer in 1–3 sentences.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+Using the same calculations from part (b), we can now see that consumers will prefer Plan B to being uninsured.
+The consumer is still risk averse, so they are willing to pay for certainty rather than remaining uninsured.
+Their level of risk aversion means that they are willing to still bear some risk and purchase a plan with a deductible,
+but if that option is not available, they still prefer the less desirable insurance plan to being uninsured.
+Their total willingness to pay is higher than the premium on Plan B.
+}}{}
+
+
+\vspace{10mm}
+
+
+
+\noindent \textbf{Exercise 3 [8 points]}\\
+This problem works through a simplified version of the Grossman model.
+Individuals have the following utility function for consumption, $U(c)=c$.
+Consumption is purchased from labor earnings, $y$, which is product of the individual's hourly wage 30 and total hours worked,
+$T^w$. In other words,
+\begin{equation*}
+c = y = 30 \times T^w .
+\end{equation*}
+
+Total hours available is 24, and must be split between work hours $T^w$, hours spent sick $T^s$,
+and hours spent producing health $T^H$.
+Health, $H$, is produced solely from time spent producing health (e.g., exercise); i.e., $H = T^H$
+and $T^S = 24 \times \exp(-H) = 24 \times \exp(-T^H)$.
+
+\medskip
+
+\noindent \textbf{(a)} What's the maximum utility the individual can achieve?\\
+\textit{(Hint: $\log(24) \approx 3.18$.)}
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+\begin{align*}
+c &= y = 30 \times T^w\\
+& = 30 \times (24 - T^S - T^H) \\
+  &= 30 \times (24 - 24 \exp(-T^H) - T^H)
+\end{align*}
+
+Taking the first-order condition with respect to $T^H$:
+
+\begin{align*}
+30 \times (24\exp(-T^H) - 1) &= 0 \\
+\exp(-T^H) &= \frac{1}{24}\\
+\frac{1}{\exp(T^H)} &= \frac{1}{24} \\
+\exp(T^H) &= 24 \\
+T^H &= \log(24)\\
+T^H &\approx 3.18
+\end{align*}
+
+and 
+
+\begin{align*}
+    T^S &= 24 \exp(-T^H)\\
+    &= 24 \frac{1}{\exp(\log(24))}\\
+    & = 24 \times \frac{1}{24} \\
+    &= 1
+\end{align*}
+
+and
+
+\begin{align*}
+T^w &= 24 - T^S - T^H \\
+&= 19.82 \\
+\end{align*}
+
+and finally 
+\begin{align*}
+U(c) &= c = 30 \times T^w \\
+&= 594.6
+\end{align*}
+
+}}{}
+
+\medskip
+
+\noindent \textbf{(b)} What's the allocation of time when the individual achieves the maximum utility level?
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+See derivations above:
+
+\begin{align*}
+T^S &= 1 \\
+T^H &= \log(24) = 3.18 \\
+T^w &= 24 - T^S - T^H = 19.82
+\end{align*}
+
+}}{}
+
+
+\end{document}
