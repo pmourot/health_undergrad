@@ -8,17 +8,64 @@
 %---------------------------------------------------------------------
 \begin{frame}{}
 
-    Picture first page of article
+    \begin{center}
+        \includegraphics[width=\textwidth]{input/Grossman_firstpage.png}
+    \end{center}
+
+    \textcolor{gray}{Grossman (1972) Journal of Political Economy}
+
+
 \end{frame}
+%---------------------------------------------------------------------
+% Why important
+
+% is the foundational theoretical framework of modern health economics.
+% Before that, did not really have a model to understand why people invest in health and demand for health, why and how medical care is demanded,
+% and how to think about the effect of income, education, aging on the demand for health.
+% Health is not a weird exogenous thing that just happens to you.
+
+% Health is not a good like others, it's something you invest in, more like a capital good
+% WHen you consumed healthcare services, you don't consume heart surgery. That means its weird to have heart surgery enter your utility directly.
+% What enters your utility is health, that you produce by investing in it with time and medical services
+
+% Health is not entirely exogenous here: it's something you partially control by investing in it
+% Caused quite a stir, negative edito in Financial World in 1972, upset to say that one chooses their health
+% Health has two functions: gives you utility, but also allows you to work to consume
+
+% The shadow price of health depends on many more things than medical care price (aging gamma, etc)
+% Under some condition, we can have an increase of the shadow price that reduces health demanded but increases medical care demand (aging)
+% We can also find that education has more effect on health than medicare care consumption ==> socio-economic determinants of health
+
+% In the history of economics thought, this paper is a grandchild idea coming from Gary Becker (1965 and 1964).
+% Gary Becker had indeed published a paper on HH production where what enters teh utility are commodities,
+% produced by HH using goods and services bought on the market and their own time.
+% In this model, goods are demanded not for themselves, but because they help produce commodities that enter the utility function.
+% Also relevant is Becker's the theory of investment in human capital: investments in education raise future wage.
+
+% Note: health and knowledge both enter the human capital in Grossman's model.
+% However, he treats knowledge as more exogenous (that's how SES affects health investments: exogenous shift in MEC curve).
+% Heckman's work has been on endogenizing knowledge.
+
+% Who is Gary Becker? An economist who won the Nobel prize in economics in 1992 (noatbly for his work on human capital ==> investment in education and training)
+% One of his big contributions is to have shown that microeconomic analysis can be applied to many aspects of human behavior
+% including crime, health, mariage markets, family production, etc.
+% He expanded to scope of economics.
+% His most famous work: introduced and formalized the concept of human capital.
+% showed it could be analyzed as a private investment decision with costs and returns — exactly like physical capital.
+
 %---------------------------------------------------------------------
 \begin{frame}{What is \textit{health}?}
 
     \begin{itemize}
         \item Something we enjoy: a \newbold{consumption good}
         \pause
-        \item Something we invest in: a \newbold{capital good}
+        \item Something we invest in: a \newbold{stock/investment}
         \pause
-        \item Something that affects our ability to work: an \newbold{input} in production of productive time
+        \item Something that affects our ability to produce: an \newbold{input} in
+        \begin{itemize}
+            \item The production of own health
+            \item The production of productive time
+        \end{itemize}
 
     \end{itemize}
 \end{frame}
@@ -97,7 +144,24 @@
             \item $J_t$ are market inputs invested in consuming $Z$ (e.g., food, video games)
         \end{itemize}
     \end{itemize}
-    $\implies$ Health is a stock: previous period's stock enters the production function//
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Production}
+
+    Production functions:
+    \begin{itemize}
+        \item Health:
+        \begin{equation*}
+            H_t = H\left(H_{t-1}, T_t^H, M_t \right)
+        \end{equation*}
+
+        \item Composite good:
+        \begin{equation*}
+            Z_t = Z\left( T_t^Z, J_t \right)
+        \end{equation*}
+    \end{itemize}
+    \vspace{5mm}
+    $\implies$ Health is a \newbold{stock}: previous period's stock enters the production function\\
     $\implies$ You need time to get both consumption and health!
 \end{frame}
 %---------------------------------------------------------------------
@@ -107,10 +171,9 @@
     \begin{equation*}
         \Theta = T^w + T^Z + T^H + T^s
     \end{equation*}
-    \vspace{3mm}
     \pause
 
-    \only<1>{Budget constraint:
+    Budget constraint:
     \begin{equation*}
         p_M M_t + p_J J_t \leq w T^w
     \end{equation*}
@@ -120,69 +183,130 @@
         \item $p_J$ is the price of market inputs for consumption
         \item $w$ is the wage rate
     \end{itemize}
-    }
 
-    \only<2>{Budget constraint:
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Another constraint: the budget constraint}
+
+    Time constraint \textit{(which we already saw)}:
+    \begin{equation*}
+        \Theta = T^w + T^Z + T^H + T^s
+    \end{equation*}
+
+    Budget constraint:
     \begin{equation*}
         p_M M_t + p_J J_t \textcolor{red}{=} w T^w
     \end{equation*}
-    (no \textcolor{red}{saving/borrowing})}
+    (no \textcolor{red}{saving/borrowing})\\
 
-    \only<3>{Budget constraint:
-    \begin{equation*}
-        p_M M_t + p_J J_t = w T^w
-    \end{equation*}
     \vspace{3mm}
 
     Note: the two constraints are \newbold{not independent}.
-    }
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Health allows for more productive time}
+    \begin{columns}[c]
+
+   % Left column
+   \column{0.48\textwidth}
+   Productive time:
+   \vspace{-5mm}
+   \begin{align*}
+       T^p &= \Theta - T^s\\
+           &= T^w + T^Z + T^H
+   \end{align*}
+   \vspace{3mm}
+   $\implies$ \newbold{decreasing marginal returns}
+   
+   % Right column
+   \column{0.48\textwidth}
+   \begin{center}
+       \includegraphics[width=1.1\textwidth]{input/book_fig36.png}
+   \end{center}
+\end{columns}
 
 \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}{Health and time sick}
 
-    Productive time:
-    \begin{align*}
-        T^p &= \Theta - T^s\\
-            &= T^w + T^Z + T^H
-    \end{align*}
-    \vspace{3mm}
 
-    Time sick is a function of health stock:
-    ADD graphics
-    \pause
-    \begin{itemize}
-        \item Better health $\implies$ less time sick
-        \item \newbold{Diminishing marginal returns}
-        \item Where is \textit{death}? $H_min$
-    \end{itemize}
+    \begin{columns}[c]
 
+        % Left column
+        \column{0.48\textwidth}
+        Productive time:
+        \vspace{-5mm}
+        \begin{align*}
+            T^p &= \Theta - T^s\\
+                &= T^w + T^Z + T^H
+        \end{align*}
+
+        \pause
+
+        Time sick is a function of health stock:
+        \vspace{-5mm}
+        \begin{itemize}
+            \item Better health $\implies$ less time sick
+            \item \newbold{Diminishing marginal returns}
+            \item Where is \textit{death}? $H_{min}$
+        \end{itemize}
+        
+        % Right column
+        \column{0.48\textwidth}
+        \begin{center}
+            \includegraphics[width=1.1\textwidth]{input/book_fig31.png}
+        \end{center}
+    \end{columns}
 
 \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}{Production possibility frontier of $Z$ and $H$}
 
-    ADD FIGURE 3.2 and 3.3 from book
-
+    \only<1>{
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{input/book_fig32.png}
+    \end{center}
+    }
+    \only<2>{
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{input/book_fig33.png}
+    \end{center}
+    }
 
 \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}{Single-period optimal production}
 
-    ADD FIGURE 3.4 + exotic indifference curves
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{input/book_fig34.png}
+    \end{center}
 
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Exotic indifference curves}
+
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{input/book_fig35.png}
+    \end{center}
 
 \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}{Optimal time working?}
 
-    Fix $T^H$ for a minute
-
-    ADD FIGURE 3.8 from book
-
-    Now assume $H_t$ is larger:
-    ADD figure 3.9
-
+    \begin{columns}[t]
+        % Left column
+        \column{0.48\textwidth}
+        Fix $T^H$ for a minute.\\
+        \includegraphics[width=\textwidth]{input/book_fig38.png}
+        
+        % Right column
+        \column{0.48\textwidth}
+        \only<2>{
+            Now assume $H_t$ is larger.\\
+            \includegraphics[width=\textwidth]{input/book_fig39.png}
+        }
+    \end{columns}
 
 \end{frame}
 %---------------------------------------------------------------------
@@ -205,45 +329,90 @@
 
 \end{frame}
 %---------------------------------------------------------------------
+\begin{frame}{Marginal efficiency of health capital curve (MEC)}
+
+    %MEC: marginal benefit of an extra unit of health capital today
+    % Investment theory for optimality condition equal to r + delta
+    % r is opportunity cost of investing in health capital instead of financial capital
+
+    \begin{center}
+        \includegraphics[width=0.55\textwidth]{input/book_fig310.png}
+    \end{center}
+    $\implies$ Decreasing in $H$: decreasing marginal returns.
+\end{frame}
+%---------------------------------------------------------------------
 \begin{frame}{Lifetime return to a marginal investment in health}
 
-    ADD Figure 3.10
-
-    ADD Figure 3.11
-
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{input/book_fig311.png}
+    \end{center}
 \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}{Aging}
 
-    How to think about aging? change $\gamma$
-
-    ADD Figure 3.13
-
+    How to think about aging? Change $\gamma$:\\
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{input/book_fig313.png}
+    \end{center}
 \end{frame}
 %---------------------------------------------------------------------
-\begin{frame}{Relationship between SES and health}
+\begin{frame}{Relationship between SES and health - income}
 
-    Take some graphs from slides of Vicky
+    \begin{center}
+        \includegraphics[width=0.7\textwidth]{input/TalNotobook_fig142.png}
+    \end{center}
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Relationship between SES and health - education}
 
+    \begin{center}
+        \includegraphics[width=0.65\textwidth]{input/TalNotobook_fig141.png}
+    \end{center}
 \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}{Using the Grossman model to think about the SES gradient in health}
 
-    ADD Figure 3.12
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{input/book_fig312.png}
+    \end{center}
+
+    % Higher SES ==> Higher income $\implies$ higher marginal value of healthy time (because want to work more)
+    % That's the shift in MEC, which leads to higher optimal health level
+
+    % Education: more productive non-sick time production (fig 3.6) ==> shifts up the MEC curve too
+    % Assumes healthy time production (non sick time) is more efficient with more education
+    % can reduce demand for health spending under some conditions,
+    % for example, more productive at producing health ==> doesnt change
+    % the MEC curve but reduces the amount of health spending necessary to achieve same health
+
+    % Important: changes in production techonology for health does nto shift MEC
+    % Only changes in production of non-sick time does change it, by changing the marginal benefit of health
+
 
 \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}{}
 
     \begin{center}
-        \Large \textcolor{maroon}{Let's go to worksheet 1}
-        \end{center}
+        \includegraphics[width=0.8\textwidth]{input/halljones2007_front.png}
+    \end{center}
+    \vspace{-2mm}
+    \textcolor{gray}{Hall \& Jones (2007) The Quarterly Journal of Economics}
+
+    % Hall and Jones (2007) reinterpret the Grossman health capital model in a macroeconomic setting
+    % in which medical spending produces additional life-years rather than merely healthy time.
+    %As income rises, the value of longevity increases, shifting upward the marginal efficiency
+    %of health capital and generating sustained growth in optimal health investment.
+    %Their framework explains the long-run rise in health expenditure as an optimal response
+    %to income growth, rather than as evidence of inefficiency.
+    % Interesting: medical progress make spending increase (contrary to grossman model for example)
+    % because it increases the price of medical care (new technologies are expensive)
+
 \end{frame}
-%---------------------------------------------------------------------
 %---------------------------------------------------------------------
 \begin{frame}{}
     \begin{center}
-    \Large \textcolor{maroon}{Wraping up}
+    \Large \textcolor{maroon}{Wrapping up}
     \end{center}
 
 \end{frame}
@@ -261,7 +430,8 @@
     \begin{itemize}
         \item \newbold{TO DO}
         \begin{enumerate}
-            \item Finish worksheet 1 $\implies$ \textit{questions on it?}
+            \item \newbold{Problem set 1} due \newbold{by beginning of next class}:\\
+            by Thursday, Feb. 3rd at 9:30am
             \item Review past material $\implies$ \textit{questions on it?}
         \end{enumerate}
         \vspace{5mm}

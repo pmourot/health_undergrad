@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\usepackage{xcolor}
+\usepackage{etoolbox}  %Supports toggle commands
+\definecolor{darkblue}{RGB}{0,0,139}
+
+%SETTINGS
+\newtoggle{solutions} \togglefalse{solutions}
+
+\begin{document}
+
+\begin{center}
+\textbf{Optional Problem Set 1} \\
+Introduction to Health Economics: EC 387 \\
+Boston University \\
+Spring 2026 \\
+Professor Pauline Mourot
+\end{center}
+
+\vspace{1em}
+
+\noindent \textbf{Exercise}\\
+
+In this optional problem set,
+you are asked to run simple linear regressions and analyze the resulting statistical output.
+You can use any statistical software and statistical programming language you like,
+though I highly recommend R (free) or Stata.
+You must turn in a write-up,
+a log file with all of your statistical outputs,
+as well as a program file with all of your statistical programming code.
+
+The problem set is based off of the data in the Anderson, Dobkin, and Gross (2014) paper published in \textit{Review of Economics and Statistics}.
+You should read the paper carefully before beginning the problem set.
+
+
+\vspace{7mm}
+\noindent \textbf{1.} First, re-create versions of the five graphs in Figure 1 using the ``ed\_visit\_data'' data file
+(both STATA data file and tab-delimited TXT file are provided, along with a data dictionary).
+All five figures should include the data points (as a scatterplot), as well as the two regression lines on each side of the age threshold.
+Make sure that you allow the linear slopes to be different on each side of the discontinuity.
+Calculate and clearly label the vertical jump exactly at age 23 that is implied by the gap between the two regression lines.
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+\vspace{5mm}
+
+
+}}{}
+
+\vspace{7mm}
+\noindent \textbf{2.} The ``vertical gap'' at age 23 in Panel A of Figure 1 indicates the share of people who visit the ED and who are uninsured just before and after their 23rd birthday.
+Is this an accurate estimate of the actual change in the share of individuals who lose private health insurance on their 23rd birthday? Why or why not?
+Please explain in a few sentences.
+[HINT: The discussion of Table 1 in the main text of the paper may be useful for answering this part of the problem]
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+\vspace{5mm}
+
+The vertical gap is not an accurate estimate of the actual change in the share of individuals who lose private health insurance on their 23rd birthday.
+This is due to sample selection. Recall that we only see an individual's insurance status when they visit the ED, but not otherwise.
+Since losing insurance reduces an individual's likelihood of visiting the ED, that also affects their probability of appearing in the sample following their 23rd birthday.
+This means that we cannot directly compare the population of individuals visiting the ED just after turning 23 to the population of individuals visiting the ED just before turning 23.
+The vertical gap is therefore an underestimate of the actual change in the share of the population who lose private insurance at age 23.
+}}{}
+
+
+\vspace{7mm}
+\noindent \textbf{3.} Reproduce all of the results in Table 2.
+You should be able to reproduce these results exactly.
+The table in the paper only includes point estimates and standard errors.
+You should also include p-values underneath the standard errors for each ``cell'' in this table.
+(NOTE: All of the dependent variables in Table 2 have been transformed by taking natural logs; you need to do that in order to match the results exactly.)
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+\vspace{5mm}
+
+See program and log file.
+
+}}{}
+
+
+\vspace{7mm}
+\noindent \textbf{4.} The decrease in ED visits appears to be largest at for-profit hospitals.
+Provide an explanation for why the estimates are larger at for-profit hospitals than at public hospitals.
+Are the estimates at for-profit and public hospitals statistically significantly different?
+Carry out a formal statistical test for whether we can reject the null hypothesis that these two estimates are the same.
+(HINT: The idea is to formally test whether the estimate on ``above age 23'' is the same for both for-profit hospital sample and public hospital sample.
+There are several ways to carry out this statistical test; you can choose for yourself.
+One option is to carry out a Wald test, which is built into STATA; see, e.g., https://www3.nd.edu/~rwilliam/stats2/l42.pdf )
+
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+\vspace{5mm}
+
+Using a Wald test, we see that we can reject that hypothesis that the coefficient on age\_23
+(our indicator for whether someone is older than 23)
+is the same for public hospitals as for for-profit hospitals at a 5\% confidence level,
+since our p-value of our test is 0.02.
+This could be the case perhaps because for-profit hospitals have higher prices than public hospitals,
+or because uninsured persons are more likely to visit public hospitals.
+}}{}
+
+
+\vspace{7mm}
+\noindent \textbf{5.} In Table 2, the authors look at both ED visits and inpatient visits,
+and the authors find a larger drop in inpatient visits not through the ED compared to inpatient visits through the ED at age 23.
+Provide a brief explanation for why the estimates would be larger in magnitude for inpatient visits not through the ED as compared to inpatient visits through the ED.
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+\vspace{5mm}
+
+
+Estimates would be larger in magnitude for inpatient visits not through the ED because these visits are usually scheduled procedures and are more likely to be elective,
+whereas inpatient visits through the ED are more likely to be initiated because of an emergency.
+In the case of emergencies, it makes sense that individuals would be less price sensitive, since they are usually compelled to go to the ED and have limited ability to decide to forgo care.
+Additionally, some hospitals treat patients who do not have the ability to pay for emergency care at reduced or no cost,
+and all Medicare-participating hospitals are obligated to treat ED admissions for certain emergency medical conditions under the Federal Emergency Medical Treatment and Active Labor Act.
+This implies that insurance coverage has a weaker effect on prices for inpatient visits through the ED at these hospitals.
+}}{}

@@ -155,7 +155,7 @@ Q &= 3P^3 - 20P + 1000000 \\
 \vspace{7mm}
 \noindent \textbf{IV.} Find the value of $P$ which maximizes the following function (and the value of $Y$ at the maximum):
 
-\noindent \textbf{a.} $Y = 100 - 5P^2$
+\noindent \textbf{a.} $Y = 100 P - 5P^2$
 
 \iftoggle{solutions}{
 {\color{darkblue}
@@ -165,11 +165,11 @@ P^* &= 10
 \end{align*}
 
 \begin{equation*}
-Y^* = 100 - 5(10)^2 = 500
+Y^* = 100*10 - 5(10)^2 = 500
 \end{equation*}
 }}{}
 
-\noindent \textbf{b.} $Y = 47 - 10P^2$
+\noindent \textbf{b.} $Y = 47 P - 10P^2$
 
 \iftoggle{solutions}{
 {\color{darkblue}
@@ -179,7 +179,7 @@ P^* &= 2.35
 \end{align*}
 
 \begin{equation*}
-Y^* = 47 - 10(2.35)^2 = 22.5
+Y^* = 47*2.35 - 10(2.35)^2 = 55.225
 \end{equation*}
 }}{}
 
@@ -193,25 +193,25 @@ Y^* = 47 - 10(2.35)^2 = 22.5
 {\color{darkblue}
 \begin{align*}
 \frac{\partial Y}{\partial Q} &= 2Q + 30 = 0 \\
-Q^* &= -5
+Q^* &= -15
 \end{align*}
 
 \begin{equation*}
-Y^* = (-5)^2 + 30(-5) - 10 = -135
+Y^* = (-15)^2 + 30(-15) - 10 = -235
 \end{equation*}
 }}{}
 
-\noindent \textbf{b.} $Y = Q^2 + 50Q - 0.5Q^2 - 7.5$
+\noindent \textbf{b.} $Y = 50 + 0.5 Q^2 - 7.5Q$
 
 \iftoggle{solutions}{
 {\color{darkblue}
 \begin{align*}
-\frac{\partial Y}{\partial Q} &= 75 - 10Q = 0 \\
+\frac{\partial Y}{\partial Q} &= Q -7.5 = 0 \\
 Q^* &= 7.5
 \end{align*}
 
 \begin{equation*}
-Y^* = 50(7.5) - 0.5(7.5)^2 - 7.5 = 218.75
+Y^* = 50(7.5) + 0.5(7.5)^2 - 7.5(7.5) = 21.875
 \end{equation*}
 }}{}
 
@@ -320,7 +320,7 @@ Health does not affect utility directly, but it affects hours spent sick, $T_S$,
 as indicated by the following equation:
 
 \begin{equation*}
-T^S = \Theta \exp(-H) = \Theta \exp(-T^H)
+T_S = \Theta \exp(-H) = \Theta \exp(-T_H)
 \end{equation*}
 
 \medskip

@@ -7,6 +7,7 @@
 \usepackage{xcolor}
 \usepackage{etoolbox}  %Supports toggle commands
 \definecolor{darkblue}{RGB}{0,0,139}
+\usepackage{graphicx}
 
 %SETTINGS
 \newtoggle{solutions} \togglefalse{solutions}
@@ -14,7 +15,7 @@
 \begin{document}
 
 \begin{center}
-\textbf{Week 3 - Solution class exercise} \\
+\textbf{Week 3 - Solution class exercises} \\
 Introduction to Health Economics: EC 387 \\
 Boston University \\
 Spring 2026 \\
@@ -22,6 +23,204 @@ Professor Pauline Mourot
 \end{center}
 
 \vspace{1em}
+
+\textbf{Exercise 1:} Understanding a proposed health insurance plan
+
+Plan A with the following parameters:
+\begin{itemize}
+    \item Premium: \$1,200 per year
+    \item Deductible: \$1,000
+    \item Coinsurance: 10\%
+    \item Out-of-pocket max: \$2,500
+\end{itemize}
+\vspace{3mm}
+
+\textbf{Questions}:
+\begin{enumerate}
+    \item[1.] Draw the ralationship between out-of-pocket costs (y-axis) and total health care expenses (x-axis) for this plan. \textit{Note: do not include the premium in this graph.}
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{input/exercise1_graph.pdf}
+    \end{center}    
+
+
+    How to get $X$?
+    \begin{align*}
+        1,000 + 0.1(X - 1,000) &= 2,500 \\
+        X - 1,000 &= \frac{1500}{0.1} \\
+        X &= 16,000
+    \end{align*}
+    }
+
+    \item[2.] Someone who has this plan breaks their arm and generate \$400 in medical bills. That's their only contact with the medical system that year. How much do they pay out of pocket for this encounter?
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    They pay \$400 because they are in the deductible region.
+    }
+
+    \item[3.] This person is later told that they need an MRI to assess whether there is any damage to ther ligaments. The MRI generates another \$3,000 in medical bills. 
+    This happens the same year as the broken arm. How much do they pay out of pocket for the MRI (not including that broken arm bill, which was separate)?
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    First, they pay the rest of the deductible: $\$1,000 - \$400 = \$600$.
+    Then, they pay 10\% coinsurance on the remaining amount:
+    \begin{itemize}
+        \item Remaining amount of MRI bill: \$3,000 - 600 = \$2,400
+        \item Coinsurance: 10\% of \$2,400 = \$240
+    \end{itemize}
+    In total, they pay \$600 + \$240 = \$840 for the MRI.
+    }
+
+    \item[4.] Another person on this plan takes Capaxone each month to treat their multiple sclerosis. The drug costs \$1,000 per month.
+    In addition, this person anticipates \$8,000 in various medical costs this same year.
+    How much should they anticipate to spend out of pocket this year when enrolled in this plan?
+    If things get much worse than anticipated for this person,
+    should they worry that their out of pocket costs would be higher?
+
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    This person anticipates to reach the maximum out of pocket cost, so they expect to pay \$2,500 out of pocket this year.
+    If things get worse, they should not worry about higher out of pocket costs because they have already reached the out-of-pocket maximum.
+    }
+
+\end{enumerate}
+
+\vspace{1em}
+
+\textbf{Exercise 2:} Comparing two plans when minimizing own healthcare spending
+
+You are trying to compare two health insurance plans and you want to know which one would minimize what you would have to pay in healthcare this year.
+Two plans are proposed to you:
+\begin{enumerate}
+    \item Plan A: premium \$1,200 per year, deductible \$1,000, coinsurance 10\%, out-of-pocket max \$2,500
+    \item Plan B: premium \$0 per year, deductible \$2,000, coinsurance 14.3\%, out-of-pocket max \$4,000
+\end{enumerate}
+\vspace{3mm}
+
+\textbf{Questions}:
+\begin{enumerate}
+    \item[1.] Draw the relationship between total consumer-paid expenses (premium + out-of-pocket costs) (y-axis) and total health care expenses (x-axis) for these two plans.
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{input/exercise2_graph.pdf}
+    \end{center}    
+
+    How to get $X^A$ and $X^B$?\\
+    Lets start with $X^B$ that corresponds to plan B:
+    \begin{align*}
+        2,000 + (X^B - 2,000) \times 0.143 &= 4,000\\
+        X^B &= (4,000 - 2,000) \times \frac{1}{0.143} + 2,000\\
+        X^B &\approx 15,986.014
+    \end{align*}
+
+    What about $X^A$ for plan B? There are two correct ways to do it.
+    Either
+    \begin{align*}
+        2,200 + (X^A - 1,000) \times 0.1 &= 3,700\\
+        X^A = (3,700-2,200) \times \frac{1}{0.1} + 1,000\\
+        X^A = 16,000
+    \end{align*}
+    or you can forget about the premium and use the following
+    \begin{align*}
+        1,000 + (X^A - 1,000) \times 0.1 &= 2,500\\
+        X^A = (2,500-1,000) \times \frac{1}{0.1} + 1,000\\
+        X^A = 16,000
+    \end{align*}
+    Both are correct and give the same answer.
+    This is because including the premium only implies a \textit{translation up} of the curve, but changes nothing else.
+
+    Note that $X^A$ and $X^B$ are extremely close to each other; they are almost equal.
+    }
+
+
+    \item[2.] Which plan minimizes total consumer-paid expenses for someone who expects to have \$3,000 in total health care expenses this year?
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    Plan B.
+    }
+
+
+    \item[3.] Which plan minimizes total consumer-paid expenses for someone who expects to have \$17,000 in total health care expenses this year?
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    Plan A.
+    }
+
+    \item[4.] At what level of total healthcare spending does plan A becomes better than plan B in terms of minimizing total consumer-paid expenses?
+
+    \vspace{3mm}
+    { \color{darkblue}
+
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{input/exercise2b_graph.pdf}
+    \end{center}  
+
+    In the graph, it looks like it happens in the coinsurance region.
+    The exact point is at the intersection of the two lines in the coinsurance region $I$.
+    You need to find the equation for the two lines, and then solve for their intersection.
+
+    For plan A, this is an affine function of the form $y = a \times x + b$ (since it is linear) where
+    \begin{itemize}
+        \item $a = 0.1$ (coinsurance rate), since we are in the coinsurance region.
+        \item We need to determine the intercept $b$.
+        To do that, take a point in the coinsurance region, and solve for $b$.
+        Let's take the point $(1,000,2,200)$.
+        \begin{align*}
+            2,200 &= 0.1 \times 1,000 + b \\
+            b &= 2,200 - 100 \\
+            b &= 2,100
+        \end{align*}
+    \end{itemize}
+    The line for plan A is $y = 0.1 \times x + 2,100$.
+
+    For plan B, this is an affine function of the form $y = c \times x + d$ where
+    \begin{itemize}
+        \item $c = 0.143$ (coinsurance rate), since we are in the coinsurance region.
+        \item We need to determine the intercept $d$.
+        To do that, take a point in the coinsurance region, and solve for $d$.
+        Let's take the point $(2,000,2,000)$.
+        \begin{align*}
+            2,000 &= 0.143 \times 2,000 + d \\
+            d &= 2,000 - 286 \\
+            d &= 1,714
+        \end{align*}
+    \end{itemize}
+    The line for plan B is $y = 0.143 \times x + 1,714$.
+
+    Now, what is the point $I$ where the two lines intersect?
+    \begin{align*}
+        0.1 \times I + 2,100 &= 0.143 \times I + 1,714 \\
+        2,100 - 1,714 &= 0.143 \times I - 0.1 \times I \\
+        386 &= 0.043 \times I \\
+        I &= \frac{386}{0.043} \\
+        I &\approx 8,976.74
+    \end{align*}
+
+    Therefore, plan A becomes better than plan B for total healthcare spending above approximately \$8,976.74.
+
+    }
+
+\end{enumerate}
+
+\vspace{1em}
+
+\textbf{Exercise 3:} Buying health insurance
 
 The consumer has \$20,000 in income and her utility function is $u(x) = \sqrt(x)$.\\
 She faces health risks such that
@@ -39,9 +238,19 @@ She is considering buying a health insurance plan with
     \item[-] A coinsurance rate of 20\%
 \end{itemize}
 
+{\color{red} Note that the two previous exercises were asking you to compare plans in terms of consumer's expenses.
+However, consumers may value other things than only minimizing their expenses,
+such as avoiding a risky gamble, which would factor in utility and risk-preferences.
+This third exercise now asks you about what consumers would \textit{prefer} if they wanted to maximize their utility
+(note that you are now given a utility function),
+rather than only minimizing their expected own healthcare expenses.
+}
+
+\vspace{3mm}
+
 \textbf{Questions}:
 \begin{enumerate}
-    \item What is the consumer's expected out-of-pocket cost?
+    \item What is the consumer's expected out-of-pocket cost when uninsured?
 
     \vspace{3mm}
     { \color{darkblue}
@@ -49,7 +258,7 @@ She is considering buying a health insurance plan with
     The expected out-of-pocket cost is
     \begin{align*}
     \mathbb{E}(\text{OOP})
-    &= 0.5 \times \$20{,}000 + 0.4 \times \$1{,}000 + 0.1 \times \$10,000\\
+    &= 0.5 \times \$0 + 0.4 \times \$1{,}000 + 0.1 \times \$10,000\\
     &= \$1{,}400.
     \end{align*}
     The expected out-of-pocket cost when the individual is uninsured is \$1,400.

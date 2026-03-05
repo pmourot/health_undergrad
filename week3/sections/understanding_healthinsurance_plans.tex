@@ -6,7 +6,7 @@
         \item Choose a health plan or
         \item Choose between jobs with different benefits
     \end{itemize}
-    $\implies$ Today's class should help you better nderstand these choices and your options.
+    $\implies$ Today's class should help you better understand these choices and your options.
     \vspace{3mm}
 
     We will talk primarily about two main dimensions of health insurance plans:
@@ -204,107 +204,107 @@
     }
 \end{frame}
 %---------------------------------------------------------------------
-\begin{frame}{Example of a plan: cost-sharing schedule and premium}
+% \begin{frame}{Example of a plan: cost-sharing schedule and premium}
 
-    \centering
-    \resizebox{0.7\textwidth}{!}{%
-    \begin{tikzpicture}[>=Latex]
+%     \centering
+%     \resizebox{0.7\textwidth}{!}{%
+%     \begin{tikzpicture}[>=Latex]
     
-    \def\D{4.2}
-    \def\M{9.2}
-    \def\yD{3.2}
+%     \def\D{4.2}
+%     \def\M{9.2}
+%     \def\yD{3.2}
     
-    % NOTE: your segment uses 0.30 here; change to 0.20 if you want 20% coinsurance
-    \pgfmathsetmacro{\yMcalc}{\yD + 0.30*(\M-\D)}
+%     % NOTE: your segment uses 0.30 here; change to 0.20 if you want 20% coinsurance
+%     \pgfmathsetmacro{\yMcalc}{\yD + 0.30*(\M-\D)}
     
-    % Vertical shift corresponding to $1,000 (since $3,000 corresponds to yMcalc)
-    \pgfmathsetmacro{\yShift}{\yMcalc/3}
+%     % Vertical shift corresponding to $1,000 (since $3,000 corresponds to yMcalc)
+%     \pgfmathsetmacro{\yShift}{\yMcalc/3}
     
-    % Axes
-    \draw[very thick,->] (0,0) -- (12,0);
-    \draw[very thick,->] (0,0) -- (0,7.5);
+%     % Axes
+%     \draw[very thick,->] (0,0) -- (12,0);
+%     \draw[very thick,->] (0,0) -- (0,7.5);
     
-    % Axis labels
-    \node[below, font=\large, yshift=-18pt] at (6,0) {Dollars of health care expenses};
-    \node[rotate=90, font=\large] at (-1.8,3.75) {Dollars of out-of-pocket expenses};
+%     % Axis labels
+%     \node[below, font=\large, yshift=-18pt] at (6,0) {Dollars of health care expenses};
+%     \node[rotate=90, font=\large] at (-1.8,3.75) {Dollars of out-of-pocket expenses};
     
-    % Vertical dashed lines
-    \draw[dashed, thick] (\D,0) -- (\D,7.2);
-    \draw[dashed, thick] (\M,0) -- (\M,7.2);
+%     % Vertical dashed lines
+%     \draw[dashed, thick] (\D,0) -- (\D,7.2);
+%     \draw[dashed, thick] (\M,0) -- (\M,7.2);
     
-    % Labels on x-axis
-    \node[below] at (\D,0) {\large 1,000};
-    \node[below] at (\M,0) {\large max-OOP threshold};
+%     % Labels on x-axis
+%     \node[below] at (\D,0) {\large 1,000};
+%     \node[below] at (\M,0) {\large max-OOP threshold};
     
-    % OOP schedule (SHIFTED UP by yShift)
-    \draw[very thick] (0,\yShift) -- (\D,\yD+\yShift);
-    \draw[very thick] (\D,\yD+\yShift) -- (\M,\yMcalc+\yShift);
-    \draw[very thick] (\M,\yMcalc+\yShift) -- (12,\yMcalc+\yShift);
-    \draw[dashed, thick] (10.2,\yMcalc+\yShift) -- (12,\yMcalc+\yShift);
+%     % OOP schedule (SHIFTED UP by yShift)
+%     \draw[very thick] (0,\yShift) -- (\D,\yD+\yShift);
+%     \draw[very thick] (\D,\yD+\yShift) -- (\M,\yMcalc+\yShift);
+%     \draw[very thick] (\M,\yMcalc+\yShift) -- (12,\yMcalc+\yShift);
+%     \draw[dashed, thick] (10.2,\yMcalc+\yShift) -- (12,\yMcalc+\yShift);
     
-    % Slope annotations (shifted up so they stay attached to the lines)
-    \node[rotate=36, yshift=7pt] at (2.2,1.9+\yShift) {\large slope = 1};
-    \node[rotate=17, yshift=5pt] at (6.8,4.2+\yShift) {\large slope = 0.20};
-    \node at (10.7,\yMcalc+\yShift+0.35) {\large slope = 0};
+%     % Slope annotations (shifted up so they stay attached to the lines)
+%     \node[rotate=36, yshift=7pt] at (2.2,1.9+\yShift) {\large slope = 1};
+%     \node[rotate=17, yshift=5pt] at (6.8,4.2+\yShift) {\large slope = 0.20};
+%     \node at (10.7,\yMcalc+\yShift+0.35) {\large slope = 0};
     
-    % Horizontal dashed line at OOP max = 3000 (shifted up as well)
-    \draw[dashed, gray, thick] (0,\yMcalc+\yShift) -- (12,\yMcalc+\yShift);
-    \draw[gray, thick] (-0.15,\yMcalc+\yShift) -- (0.15,\yMcalc+\yShift);
-    \node[left, gray, xshift=-4pt] at (0,\yMcalc+\yShift) {\large 4{,}000};
+%     % Horizontal dashed line at OOP max = 3000 (shifted up as well)
+%     \draw[dashed, gray, thick] (0,\yMcalc+\yShift) -- (12,\yMcalc+\yShift);
+%     \draw[gray, thick] (-0.15,\yMcalc+\yShift) -- (0.15,\yMcalc+\yShift);
+%     \node[left, gray, xshift=-4pt] at (0,\yMcalc+\yShift) {\large 4{,}000};
     
-    % Tick/label at the new intercept = 1,000
-    \draw[gray, thick] (-0.15,\yShift) -- (0.15,\yShift);
-    \node[left, gray, xshift=-4pt] at (0,\yShift) {\large 1{,}000};
+%     % Tick/label at the new intercept = 1,000
+%     \draw[gray, thick] (-0.15,\yShift) -- (0.15,\yShift);
+%     \node[left, gray, xshift=-4pt] at (0,\yShift) {\large 1{,}000};
     
-    % Region braces
-    \def\braceYshift{1.1}  % adjust: 0.3 = small, 0.7 = larger
-    \draw[decorate, decoration={brace, amplitude=6pt}]
-        (0.6,6.0+\braceYshift) -- (\D-0.25,6.0+\braceYshift);
-    \node[font=\large\itshape] at (\D/2,6.7+\braceYshift) {deductible region};
+%     % Region braces
+%     \def\braceYshift{1.1}  % adjust: 0.3 = small, 0.7 = larger
+%     \draw[decorate, decoration={brace, amplitude=6pt}]
+%         (0.6,6.0+\braceYshift) -- (\D-0.25,6.0+\braceYshift);
+%     \node[font=\large\itshape] at (\D/2,6.7+\braceYshift) {deductible region};
     
-    \draw[decorate, decoration={brace, amplitude=6pt}]
-        (\D+0.25,6.0+\braceYshift) -- (\M-0.25,6.0+\braceYshift);
-    \node[font=\large\itshape, align=center] at ({(\D+\M)/2},6.9+\braceYshift)
-        {20\% coinsurance\\region};
+%     \draw[decorate, decoration={brace, amplitude=6pt}]
+%         (\D+0.25,6.0+\braceYshift) -- (\M-0.25,6.0+\braceYshift);
+%     \node[font=\large\itshape, align=center] at ({(\D+\M)/2},6.9+\braceYshift)
+%         {20\% coinsurance\\region};
     
-    \draw[decorate, decoration={brace, amplitude=6pt}]
-        (\M+0.25,6.0+\braceYshift) -- (11.6,6.0+\braceYshift);
-    \node[font=\large\itshape, align=center] at ({(\M+12)/2},6.9+\braceYshift)
-        {catastrophic \\care region};
+%     \draw[decorate, decoration={brace, amplitude=6pt}]
+%         (\M+0.25,6.0+\braceYshift) -- (11.6,6.0+\braceYshift);
+%     \node[font=\large\itshape, align=center] at ({(\M+12)/2},6.9+\braceYshift)
+%         {catastrophic \\care region};
 
-    % Reference line y = x
-    \draw[dashed, red, thick] (0,0) -- (7.5,7.5);
-    \node[red, rotate=45] at (2.2,2.6) {$y=x$};
+%     % Reference line y = x
+%     \draw[dashed, red, thick] (0,0) -- (7.5,7.5);
+%     \node[red, rotate=45] at (2.2,2.6) {$y=x$};
 
-    \pgfmathsetmacro{\xIntersect}{
-    (\yShift + \yD - 0.20*\D)/0.8
-    }
-    % Intersection point with y = x
-    \filldraw[red] (\xIntersect+0.03,\xIntersect+0.03) circle (2.5pt);
+%     \pgfmathsetmacro{\xIntersect}{
+%     (\yShift + \yD - 0.20*\D)/0.8
+%     }
+%     % Intersection point with y = x
+%     \filldraw[red] (\xIntersect+0.03,\xIntersect+0.03) circle (2.5pt);
 
-    % Dashed vertical line from intersection to x-axis
-    \draw[dashed, gray]
-    (\xIntersect,\xIntersect) -- (\xIntersect,0);
+%     % Dashed vertical line from intersection to x-axis
+%     \draw[dashed, gray]
+%     (\xIntersect,\xIntersect) -- (\xIntersect,0);
 
-    % Red arrow starting midway down the dashed line
-    \pgfmathsetmacro{\yMid}{\xIntersect/2}
+%     % Red arrow starting midway down the dashed line
+%     \pgfmathsetmacro{\yMid}{\xIntersect/2}
 
-    \draw[->, blue, thick]
-    (\xIntersect+0.2,\xIntersect) -- (\xIntersect+3.6,\xIntersect);
+%     \draw[->, blue, thick]
+%     (\xIntersect+0.2,\xIntersect) -- (\xIntersect+3.6,\xIntersect);
 
-    % Left arrow
-    % \draw[->, blue, thick]
-    % (\xIntersect,\yMid) -- (\xIntersect-1.6,\yMid);
+%     % Left arrow
+%     % \draw[->, blue, thick]
+%     % (\xIntersect,\yMid) -- (\xIntersect-1.6,\yMid);
 
-    % \node[blue, below]
-    % at (\xIntersect+1.5,\yMid) {\large yes};
-    % \node[blue, below]
-    % at (\xIntersect-0.8,\yMid) {\large no};
+%     % \node[blue, below]
+%     % at (\xIntersect+1.5,\yMid) {\large yes};
+%     % \node[blue, below]
+%     % at (\xIntersect-0.8,\yMid) {\large no};
 
 
-    \end{tikzpicture}%
-    }
-\end{frame}
+%     \end{tikzpicture}%
+%     }
+% \end{frame}
 %---------------------------------------------------------------------
 \begin{frame}{Actuarial value of a plan}
 
@@ -435,9 +435,56 @@
         \end{center}
 \end{frame}
 %---------------------------------------------------------------------
+\begin{frame}{Understanding a proposed health insurance plan}
+
+    Plan A with the following parameters:
+    \begin{itemize}
+        \item Premium: \$1,200 per year
+        \item Deductible: \$1,000
+        \item Coinsurance: 10\%
+        \item Out-of-pocket max: \$2,500
+    \end{itemize}
+    \vspace{3mm}
+
+    Questions:
+    \begin{enumerate}
+        \only<1>{\item[1.] Draw the relationship between out-of-pocket costs (y-axis) and total health care expenses (x-axis) for this plan. \textit{Note: do not include the premium in this graph.}}
+        \only<2>{\item[2.] Someone who has this plan breaks their arm and generate \$400 in medical bills. That's their only contact with the medical system that year. How much do they pay out of pocket for this encounter?}
+        \only<3>{\item[3.] This person is later told that they need an MRI to assess whether there is any damage to ther ligaments. The MRI generates another \$3,000 in medical bills. 
+        This happens the same year as teh broken arm. How much do they pay out of pocket for the MRI (not including that broken arm bill, which was separate)?}
+        \only<4>{\item[4.] Another person on this plan takes Capaxone each month to treat their multiple sclerosis. The drug costs \$1,000 per month.
+        In addition, this person anticipates \$8,000 in various medical costs this same year.
+        How much should they anticipate to spend out of pocket this year when enrolled in this plan?
+        If things get much worse than anticipated for this person,
+        should they worry that their out of pocket costs would be higher?}
+    \end{enumerate}
+
+
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Comparing two plans when minimizing own healthcare spending}
+
+    Two plans are proposed
+    \begin{enumerate}
+        \item Plan A: premium \$1,200 per year, deductible \$1,000, coinsurance 10\%, out-of-pocket max \$2,500
+        \item Plan B: premium \$0 per year, deductible \$2,000, coinsurance 14.3\%, out-of-pocket max \$4,000
+    \end{enumerate}
+    \vspace{3mm}
+
+    Questions:
+    \begin{enumerate}
+        \only<1>{\item[1.] Draw the relationship between total consumer-paid expenses (premium + out-of-pocket costs) (y-axis) and total health care expenses (x-axis) for these two plans.}
+        \only<2>{\item[2.] Which plan minimizes total consumer-paid expenses for someone who expects to have \$3,000 in total health care expenses this year?}
+        \only<3>{\item[3.] Which plan minimizes total consumer-paid expenses for someone who expects to have \$17,000 in total health care expenses this year?}
+        \only<4>{\item[4.] At what level of total healthcare spending does plan A becomes better than plan B in terms of minimizing total consumer-paid expenses?}
+    \end{enumerate}
+
+
+\end{frame}
+%---------------------------------------------------------------------
 \begin{frame}{Buying health insurance}
 
-    The consumer has \$20,000 in income and her utility function is $u(x) = \sqrt(x)$.\\
+    The consumer has \$20,000 in income and her utility function is $u(x) = \sqrt{x}$.\\
     She faces health risks such that
     \begin{itemize}
         \item She has a 50\% chance of having no medical expenses
@@ -459,7 +506,7 @@
 
     Questions:
     \begin{enumerate}
-        \item What is the consumer's expected out-of-pocket cost?
+        \item What is the consumer's expected out-of-pocket cost when uninsured?
         \item What is the expected cost to the insurer?
         \item What is the expected profit to the insurer?
         \item What would be the actuarially fair price for this insurance plan?\\
@@ -472,7 +519,7 @@
 %---------------------------------------------------------------------
 \begin{frame}{}
     \begin{center}
-    \Large \textcolor{maroon}{Wraping up}
+    \Large \textcolor{maroon}{Wrapping up}
     \end{center}
 
 \end{frame}
@@ -493,9 +540,10 @@
     \begin{itemize}
         \item \newbold{TO DO}
         \begin{enumerate}
-            \item \newbold{Problem set 2} due on XX
-            \item \newbold{Mandatory reading}: RAND Breif [reading 1]\\
+            \item \newbold{Mandatory reading}: RAND Research Brief [reading 1]\\
             $\implies$ \textbf{We will discuss in class}
+            \item \newbold{Problem set 2} due \newbold{next week}:\\
+            by Thursday, Feb. 12th at 9:30am
             \item Review this class and past material $\implies$ \textit{questions on it?}
         \end{enumerate}
         \vspace{5mm}

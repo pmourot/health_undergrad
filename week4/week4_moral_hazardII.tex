@@ -1,0 +1,228 @@
+\documentclass[12pt,notes=hide,aspectratio=169,mathserif]{beamer}
+
+% PACKAGES
+\usepackage{graphics}  % Support for images/figures
+\usepackage{graphicx}  % Includes the \resizebox command
+\usepackage{grffile}
+\usepackage{url}	   % Includes \urldef and \url commands
+\usepackage{natbib}
+\usepackage{bibentry}  % Includes the \nobibliography command
+\usepackage{verbatim}  %Supports comments
+\usepackage{booktabs} %Supports \toprule, \bottomrule, etc in tables
+\usepackage{etoolbox}  %Supports toggle commands
+\usepackage{datetime}
+\usepackage{bm}	%Supports bold math \bm
+\usepackage{amsfonts}  % Lots of stuff, including \mathbb
+\usepackage{amsmath}   % Standard math package
+\usepackage{amsthm}    % Includes the comment functions
+\usepackage{array}
+\usepackage{twemojis}
+%\usepackage{tabularx}
+%\usepackage{setspace}
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+\usepackage[normalem]{ulem} % Customize underline
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing,arrows.meta,calc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    urlcolor=blue!70!black,
+    citecolor=blue!70!black
+}
+
+\DeclareMathOperator*{\argmin}{argmin}   % Jan Hlavacek
+
+% CUSTOM DEFINITIONS
+\def\newblock{} %Get beamer to cooperate with BibTeX
+\linespread{1.2}
+%\definecolor{maroon}{RGB}{152,0,46}  %Booth maroon defined at http://staff.chicagobooth.edu/marketing/docs/email-signature-standards.pdf
+\definecolor{maroon}{RGB}{128,0,0} %Maroon 1 Pantone 202 defined at https://harris.uchicago.edu/files/harris.branding_identity_guidelines.final__0.pdf
+\definecolor{darkgraytext}{RGB}{60,60,60}       % dark gray for the text
+\definecolor{pdfbanner}{RGB}{169,180,173}
+
+% TOP BANNER
+\setbeamertemplate{headline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=1ex,center]{bannercolor}%
+    \end{beamercolorbox}%
+  }%
+}
+\setbeamercolor{bannercolor}{bg=pdfbanner}
+
+
+% IDENTIFYING INFORMATION
+\title{\small{EC 387 - Health Economics}\\
+\large
+\textbf{Moral Hazard}}
+\author[Mourot]{
+Professor Pauline Mourot \\
+{\scriptsize{Boston University}}
+}
+\date{\monthname[\the\month] \the\year}
+
+% THEMATIC OPTIONS
+\setbeamercovered{transparent}
+%\usetheme{metropolis}
+\usecolortheme[named=maroon]{structure}
+%\setbeamercolor{frametitle}{bg=maroon}
+\setbeamercolor{progress bar}{fg=maroon}
+\setbeamertemplate{footline}[frame number]{}
+\setbeamercolor{itemize item}{fg=maroon}
+\setbeamercolor{itemize subitem}{fg=maroon}
+\setbeamercolor{itemize subsubitem}{fg=maroon}
+\setbeamertemplate{itemize subitem}{o}
+\setbeamertemplate{itemize subsubitem}{-}
+\setbeamerfont{subsection in toc}{size=\footnotesize}
+\setbeamerfont{subsection in toc}{size=\scriptsize}
+\setbeamerfont{frametitle}{size=\large}
+
+\beamertemplatenavigationsymbolsempty
+
+\AtBeginSection[] {
+\ifnumcomp{\value{section}}{=}{0}
+  {
+    \begin{frame}[noframenumbering,t]
+        \tableofcontents[sectionstyle=show/hide]
+        \noframenumbering
+    \end{frame}
+  }
+ {
+	\begin{frame}[noframenumbering]
+		\tableofcontents[currentsection]
+	\end{frame}
+  }
+}
+
+\AtBeginSubsection[]{
+   \begin{frame}[noframenumbering]
+        \tableofcontents[ 
+            currentsubsection,  
+            sectionstyle=show/shaded,  
+            subsectionstyle=show/shaded
+        ] 
+   \end{frame}
+}
+
+\AtBeginSubsubsection[]
+{
+   \begin{frame}[noframenumbering]
+        \tableofcontents[ 
+            currentsubsection,  
+            sectionstyle=show/shaded,  
+            subsectionstyle=show/shaded
+        ] 
+   \end{frame}
+}
+
+\newcommand\newbold[1]{\textcolor{maroon}{\textbf{#1}}}
+
+% BACKUP SLIDE NUMBERING
+\usepackage{appendixnumberbeamer}
+
+%using subfig with bug fix, per https://tex.stackexchange.com/questions/426088/texlive-pretest-2018-beamer-and-subfig-collide
+\usepackage{subfig}
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+%\setbeamertemplate{itemize item}[triangle]
+
+\begin{document}
+
+%---------------------------------------------------------------------
+% \begin{frame}[plain]
+% \titlepage
+% \end{frame}
+
+% TITLE SLIDE IN STYLE OF SAMPLE DECK
+\begin{frame}
+
+  \includegraphics[width=2cm]{./input/BOSTON_UNIV_186.eps}
+
+  % small vertical gap below the top maroon banner
+  \vspace{2cm}
+
+  % BIG TITLE
+  {\fontsize{30}{32}\selectfont\bfseries\textcolor{maroon}{Moral Hazard - Part II}}\\[-0.25cm]
+
+  % MAROON UNDERLINE
+  \textcolor{maroon}{\rule{\textwidth}{1.2pt}}\\[0.2cm]
+
+  % Course + instructor info
+  {\large \textcolor{darkgraytext}{EC 387 – Health Economics}}\\[0.1cm]
+  {\large \textcolor{darkgraytext}{Professor Pauline Mourot}}\\[1.8cm]
+
+\end{frame}
+
+%---------------------------------------------------------------------
+\input{sections/moral_hazardII.tex}
+%---------------------------------------------------------------------
+
+%%---------------------------------------------------------------------
+\appendix
+\setbeamertemplate{footline}{\hfill Appendix: \insertframenumber}
+\begin{frame}[plain] \begin{center}{\LARGE Appendix}\end{center} \end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Intent to treat (ITT)}
+  \hypertarget{ohie:ITT}{}
+  
+  Intent-to-treat (ITT)
+  \vspace{-3mm}
+  \begin{align*}
+      y_{i} = \beta_0 + \beta_1 \text{LOTTERY}_i + X_{i} \beta_2 + V_{i} \beta_3 + \epsilon_{i}
+  \end{align*}
+
+  Local average treatment effect (LATE)
+  \vspace{-3mm}
+  \begin{align*}
+      y_{i} = \pi_0 + \pi_1 \text{INSURANCE}_i + X_{i} \pi_2 + V_{i} \pi_3 + v_{i}
+  \end{align*}
+  
+  First stage
+  \vspace{-3mm}
+  \begin{align*}
+      \text{INSURANCE}_{i} = \delta_0 + \delta_1 \text{LOTTERY}_i + X_{i} \delta_2 + V_{i} \delta_3 + \mu_{i}
+  \end{align*}
+    \vspace{-5mm}
+    \hyperlink{ohie:table}{\beamerreturnbutton{Back}}
+\end{frame}
+%---------------------------------------------------------------------
+\begin{frame}{Price shopping: details}
+  \hypertarget{BCHK:PS}{}
+
+  \newbold{Price shopping} per procedure $m$
+  \begin{align*}
+      \Delta PS_{m,t+1,t} = \frac{P_{m,J^m,t+1} C_{m,J^m,t+1} - P_{m,J^m,t+1} C_{m,J^m,t}}{P_{m,J^m,t+1} C_{m,J^m,t}}
+  \end{align*}
+  where
+  \begin{itemize}
+      \item $C_{m,J^m,.}$ are vectors of provider choices 
+      \item $P_{m,J^m,.}$ are vectors of prices 
+      \item both across the set of providers for procedure $m$ $J^m$
+  \end{itemize}
+  \vspace{3mm}
+
+  \newbold{Overall price shopping effect}
+  \vspace{-2mm}
+  \begin{align*}
+      \Delta PS_{t+1,t} = \sum_{m=1}^{M} \frac{Y_{m,t}}{Y_t} \Delta PS_{m,t+1,t}
+  \end{align*}   
+  where $Y_{m,t}$ is the total procedure spending in $t$ 
+  %Holds the share of spending at t
+
+  %That's the extent to which consumers substitutes to higher or lower priced providers CONDITIONAL ON DOING PROCEDURE
+
+  \vspace{-3mm}
+  \hyperlink{BCHK:decomposition}{\beamerreturnbutton{Back}}
+\end{frame}
+%---------------------------------------------------------------------
+%\input{sections/appendix_week1_selection_markets.tex}
+%%---------------------------------------------------------------------
+
+%\bibliographystyle{../bib/aea}
+%\nobibliography{../bib/doctors}
+
+\end{document}
