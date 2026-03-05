@@ -1,0 +1,7 @@
+week*/*.pdf
+problem_sets/*_solutions.tex
+problem_sets/*.pdf
+week*/**/*.pdf
+*.pdf
+*.xlsx
+.DS_Store
