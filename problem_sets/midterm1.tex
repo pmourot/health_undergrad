@@ -23,9 +23,24 @@ Professor Pauline Mourot
 
 \vspace{1em}
 
-[ADD DISCLAIMER EXAM]
+\begin{itemize}
+  \item The exam is scheduled for 75 minutes. There are a total of 100 possible points on the exam.  
 
-\noindent \textbf{PART I: TRUE/FALSE/UNCERTAIN [56 points]}\\
+  \item This exam contains 2 parts. Part I contains 7 true/false/uncertain questions. Part II contains 3 exercises.
+
+  \item This is a closed-book, closed-note exam. You may use a calculator.
+
+  \item If you use separate pieces of paper, please carefully number your answers so that it is clear which question you are answering.  
+
+  \item \textbf{Please read the instructions carefully.}
+
+  \item \textbf{You may receive partial credit if you show your work.} An incorrect answer with no justification or explanation will likely receive no credit.
+\end{itemize}
+
+\vspace{5mm}
+
+
+\noindent \textbf{PART I: TRUE/FALSE/UNCERTAIN [35 points]}\\
 
 For each of the questions below, please explain your answer.
 The quality of the explanation is an important part of the grade for these problems and
@@ -34,45 +49,148 @@ In answering each question, 1-3 sentences of explanation should be sufficient.
 
 \vspace{7mm}
 
-[ADD 5 TFU QUESTIONS, 7 questions total at 8 points each]
+\noindent \textbf{QUESTION 1}\\
+Research from a natural experiment in Oregon's Medicaid found that having health insurance decreases ER usage and increases the use of primary care physicians.
+
+\iftoggle{solutions}{}{\vspace{50mm}
+\newpage}
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+FALSE / UNCERTAIN – The Oregon Health Experiment (Finkelstein et al. 2012, QJE) does find an increase in the use of primary care
+but found no significant effect on inpatient admissions coming from the ER.
+}}{}
+
+\vspace{7mm}
+
+\noindent \textbf{QUESTION 2}\\
+Research from the RAND health insurance experiment and more recent research papers suggest that increases in cost-sharing reduce healthcare spending
+through reducing mostly low-value care.
+
+\iftoggle{solutions}{}{\vspace{50mm}}
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+FALSE - The RAND health insurance experiment found that increases in cost-sharing reduced healthcare spending, but it reduced both highly effective and rarely effective care.
+Brot-Goldberg et al (2024) also finds that both high-and low-value care are reduced when deductibles are higher.
+}}{}
+
+\vspace{7mm}
+
+\noindent \textbf{QUESTION 3}\\
+Employment in the healthcare industry has followed a similar trend as employment in manufacturing in the U.S. since 1990.
+
+\iftoggle{solutions}{}{\vspace{50mm}}
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+FALSE – If anything, it is the opposite. Employment in manufacturing has decreased since 1990 while it has steadily increased for healthcare.
+See week 1 slide 2 for class 2.
+}}{}
+
+\vspace{7mm}
 
 
-\noindent \textbf{QUESTION}\\
+\noindent \textbf{QUESTION 4}\\
 A risk-averse individual has a lottery ticket that would give them \$0 with 50\% probability and \$1,000 with 50\% probability.
 They would prefer to take \$500 (for sure) instead of keeping the lottery ticket. 
 
+\iftoggle{solutions}{}{\vspace{50mm}
+\newpage}
+
 \iftoggle{solutions}{
 {\color{darkblue}
 
 \vspace{5mm}
 
-TRUE
+TRUE - The expected value of this lottery ticket is $\$0.5 \times 0 + \$0.5 \times 1000 = \$500$.
+Getting \$500 for sure means receiving the utility from the expected value of the lottery ticket for sure.
+With a concave utility function,
+the utility from the expected value is above the expected utility from the lottery ticket,
+so they will prefer to take \$500 for sure instead of keeping the lottery ticket.
 
 }}{}
 
 \vspace{7mm}
 
-\noindent \textbf{QUESTION}\\
+\noindent \textbf{QUESTION 5}\\
 A risk-averse individual has a lottery ticket that would give them \$0 with 50\% probability and \$5,000 with 50\% probability.
 They would prefer to take \$2,400 (for sure) instead of keeping the lottery ticket.
 
+\iftoggle{solutions}{}{\vspace{50mm}}
+
 \iftoggle{solutions}{
 {\color{darkblue}
 
+\vspace{5mm}
+
 UNCERTAIN - Not enough information is provided.
+The expected value of this lottery ticket is $\$0.5 \times 0 + \$0.5 \times 5000 = \$2500$.
+The certainty equivalent of this lottery ticket is less than \$2500,
+but we cannot determine whether it is above or below \$2400 without more information about the individual's utility function (degree of risk aversion).
 
 }}{}
 
 \vspace{7mm}
 
+\noindent \textbf{QUESTION 6}\\
+In the baseline Grossman model (1972) seen in class, the optimal health capital increases with age.
 
-\vspace{10mm}
+\iftoggle{solutions}{}{\vspace{50mm}}
 
-\noindent \textbf{PART II: Quantitative Exercises [44 points]}\\
+\iftoggle{solutions}{
+{\color{darkblue}
 
 \vspace{5mm}
 
-\noindent \textbf{Exercise 1 [12 points]}\\
+FALSE – An increase in age means higher age depreciation so a higher $\gamma$.
+This means the user-cost of health is higher (rate of return).
+We move along and up the MEC curve, corresponding to a lower optimal health capital.
+See slide 21 of week 2 class 3.
+}}{}
+
+\vspace{7mm}
+
+\noindent \textbf{QUESTION 7}\\
+A health insurance plan with a premium of \$1,000 per year, a coinsurance rate of 35\%, no deductible and no out-of-pocket maximum
+has an actuarial value of 35\%.
+
+\iftoggle{solutions}{}{\vspace{40mm}
+\newpage}
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+FALSE – The actuarial value of this plan is $1 - 0.35 = 0.65$ or 65\%.
+\begin{align*}
+  AV &= \frac{\mathbb{E}[\text{Insurer Payments}]}{\mathbb{E}[\text{Total Spending}]}\\
+  &= \frac{ \mathbb{E}[(1 - 0.35) * \text{Total Spending}]}{\mathbb{E}[\text{Total Spending}]}\\
+  &= 0.65 \frac{\mathbb{E}[\text{Total Spending}]}{\mathbb{E}[\text{Total Spending}]}\\
+  &= 0.65
+\end{align*}
+}}{}
+
+\vspace{10mm}
+
+% (See next page)
+% \newpage
+
+\noindent \textbf{PART II: Quantitative Exercises}\\
+
+\vspace{5mm}
+
+\noindent \textbf{Exercise 1 [25 points]}\\
 
 Tony faces uncertainty about his health state next year.
 There is a 80\% chance he will be perfectly healthy and have \$0 in medical bills,
@@ -87,10 +205,12 @@ U(w) = \sqrt{w}.
 
 \noindent \textbf{(a)} If he does not have insurance, what is Tony's expected wealth next year?
 
+\iftoggle{solutions}{}{\vspace{40mm}}
+
 \iftoggle{solutions}{
 {\color{darkblue}
 \begin{align*}
-E[w] &= 0.8 \times 12000 + 0.2 \times (12000 - 4000)\\
+E[w] &= 0.8 \times 12,000 + 0.2 \times (12,000 - 4,000)\\
 & = 11,200
 \end{align*}
 }}{}
@@ -100,10 +220,12 @@ E[w] &= 0.8 \times 12000 + 0.2 \times (12000 - 4000)\\
 \noindent \textbf{(b)} If he does not have insurance, what is Tony's expected utility next year?
 (round to the nearest decimal place)
 
+\iftoggle{solutions}{}{\vspace{40mm}}
+
 \iftoggle{solutions}{
 {\color{darkblue}
 \begin{align*}
-E[U(w)] & = 0.8 \times \sqrt{12000} + 0.2 \times \sqrt{12000 - 4000}\\
+E[U(w)] & = 0.8 \times \sqrt{12,000} + 0.2 \times \sqrt{12,000 - 4,000}\\
 & = 105.5
 \end{align*}
 }}{}
@@ -113,6 +235,9 @@ E[U(w)] & = 0.8 \times \sqrt{12000} + 0.2 \times \sqrt{12000 - 4000}\\
 \noindent \textbf{(c)} If he does not have insurance,
 what is Tony's certainty equivalent next year?
 (round to the nearest decimal place)
+
+\iftoggle{solutions}{}{\vspace{40mm}
+\newpage}
 
 \iftoggle{solutions}{
 {\color{darkblue}
@@ -125,25 +250,16 @@ CE &= 11,130.3
 
 \medskip
 
-\noindent \textbf{(d)} What would Tony's certainty equivalent be under a full insurance plan with a premium of \$3,000?
+\textbf{(d)} Would Tony be willing to purchase a full insurance plan with a premium of \$2,000?
 
-\iftoggle{solutions}{
-{\color{darkblue}
-\begin{equation*}
-CE = 12000 - 3000 = 9000
-\end{equation*}
-}}{}
-
-\medskip
-
-\textbf{(e)} Would Tony be willing to purchase a full insurance plan with a premium of \$2,000?
+\iftoggle{solutions}{}{\vspace{40mm}}
 
 \iftoggle{solutions}{
 {\color{darkblue}
 Expected utility if purchase is
 
 \begin{equation*}
-U = \sqrt{10000} = 100 < 105.5,
+U = \sqrt{12,000 - 2,000} = 100 < 105.5,
 \end{equation*}
 
 so no.
@@ -151,19 +267,22 @@ so no.
 
 \medskip
 
-\textbf{(f)} What would the actuarially fair premium for a full insurance plan for Tony be?
+\textbf{(e)} What would the actuarially fair premium for a full insurance plan for Tony be?
+
+\iftoggle{solutions}{}{\vspace{40mm}}
 
 \iftoggle{solutions}{
 {\color{darkblue}
+
+Actuarially fair price means $\text{Premium} = \mathbb{E}[\text{Cost}]$ (Profits of insurer are zero).
 \begin{equation*}
-0.8 \times 0 + 0.2 \times 4000 = 800
+Premium = 0.8 \times 0 + 0.2 \times 4000 = 800
 \end{equation*}
 }}{}
 
-
 \vspace{5mm}
 
-\noindent \textbf{Exercise 2 [24 points]}\\
+\noindent \textbf{Exercise 2 [20 points]}\\
 Assume that an individual has income of \$80,000. The individual faces a risk of hospitalization,
 which occurs with probability $p = 0.1$.
 If this happens, the total cost will be \$15,000.
@@ -194,6 +313,8 @@ with no deductible and full insurance (so there are no out-of-pocket costs at al
 \textbf{(a)} From the perspective of the firm, compute the expected cost and the expected profit to the insurer
 from selling each plan.
 
+\iftoggle{solutions}{}{\vspace{50mm}}
+
 \iftoggle{solutions}{
 {\color{darkblue}
 Firm expected costs are how much they should expect to pay out. In the fully insured plan, this aligns with the consumer’s expected cost. In the plan with a deductible, the firm pays less than the full amount because of the deductible. Expected profits are the premiums minus the expected costs.
@@ -216,6 +337,8 @@ Plan B:
 \medskip
 
 \textbf{(b)} Does the consumer prefer to purchase Plan A, to purchase Plan B, or to remain uninsured?
+
+\iftoggle{solutions}{}{\vspace{50mm}}
 
 \iftoggle{solutions}{
 {\color{darkblue}
@@ -243,6 +366,8 @@ The consumer prefers to insure themselves. Further, they prefer Plan A to Plan B
 \medskip
 
 \textbf{(c)} Does the answer to part (b) change if the consumer is risk-neutral?
+
+\iftoggle{solutions}{}{\vspace{40mm}}
 
 \iftoggle{solutions}{
 {\color{darkblue}
@@ -276,6 +401,8 @@ Now the consumer prefers being uninsured to paying for an insurance plan. Intuit
 If Plan A is eliminated, would the consumer prefer Plan B or prefer remaining uninsured?
 Provide intuition for your answer in 1–3 sentences.
 
+\iftoggle{solutions}{}{\vspace{40mm}}
+
 \iftoggle{solutions}{
 {\color{darkblue}
 Using the same calculations from part (b), we can now see that consumers will prefer Plan B to being uninsured.
@@ -290,7 +417,7 @@ Their total willingness to pay is higher than the premium on Plan B.
 
 
 
-\noindent \textbf{Exercise 3 [8 points]}\\
+\noindent \textbf{Exercise 3 [20 points]}\\
 This problem works through a simplified version of the Grossman model.
 Individuals have the following utility function for consumption, $U(c)=c$.
 Consumption is purchased from labor earnings, $y$, which is product of the individual's hourly wage 30 and total hours worked,
@@ -308,6 +435,8 @@ and $T^S = 24 \times \exp(-H) = 24 \times \exp(-T^H)$.
 
 \noindent \textbf{(a)} What's the maximum utility the individual can achieve?\\
 \textit{(Hint: $\log(24) \approx 3.18$.)}
+
+\iftoggle{solutions}{}{\vspace{50mm}}
 
 \iftoggle{solutions}{
 {\color{darkblue}
@@ -357,7 +486,9 @@ U(c) &= c = 30 \times T^w \\
 
 \medskip
 
-\noindent \textbf{(b)} What's the allocation of time when the individual achieves the maximum utility level?
+\noindent \textbf{(b)} What's the allocation of time (i.e., $T^w$, $T^H$, and $T^S$) when the individual achieves the maximum utility level?
+
+\iftoggle{solutions}{}{\vspace{45mm}}
 
 \iftoggle{solutions}{
 {\color{darkblue}
@@ -374,5 +505,8 @@ T^w &= 24 - T^S - T^H = 19.82
 
 }}{}
 
+\begin{center}
+[END OF EXAM]
+\end{center}
 
 \end{document}
