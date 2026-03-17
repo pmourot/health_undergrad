@@ -1,6 +1,6 @@
 
 all: TFU_bank.pdf problem_set1_solutions.pdf problem_set1.pdf problem_set2_solutions.pdf problem_set2.pdf \
-	midterm1_solutions.pdf midterm1.pdf problem_set3_solutions.pdf problem_set3.pdf
+	midterm1_solutions.pdf midterm1.pdf problem_set3_solutions.pdf problem_set3.pdf problem_set4_solutions.pdf problem_set4.pdf
 
 #TFU bank of questions with solutions
 TFU_bank.pdf: TFU_bank.tex
@@ -65,6 +65,26 @@ problem_set3_solutions.tex: problem_set3.tex
 	cat $< | sed 's/togglefalse{solutions}/toggletrue{solutions}/' > $@
 
 problem_set3_solutions.pdf: problem_set3_solutions.tex
+	pdflatex $< 
+	pdflatex $< 
+	pdflatex $< 
+	rm $(addprefix $(basename $<),.log .aux .out .toc)
+	rm $(addprefix $(basename $<),.snm .nav)
+	rm $(addprefix $(basename $<),.blg .bbl)
+
+#PS4
+problem_set4.pdf: problem_set4.tex
+	pdflatex $< 
+	pdflatex $< 
+	pdflatex $< 
+	rm $(addprefix $(basename $<),.log .aux .out .toc)
+	rm $(addprefix $(basename $<),.snm .nav)
+	rm $(addprefix $(basename $<),.blg .bbl)
+
+problem_set4_solutions.tex: problem_set4.tex
+	cat $< | sed 's/togglefalse{solutions}/toggletrue{solutions}/' > $@
+
+problem_set4_solutions.pdf: problem_set4_solutions.tex
 	pdflatex $< 
 	pdflatex $< 
 	pdflatex $< 
