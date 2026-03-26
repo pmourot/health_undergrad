@@ -1,6 +1,7 @@
 slides_sections := $(shell grep '\\input' week8_riskadjustment_and_insurance.tex | grep -v '%.*input' | grep -o 'sections/[A-Za-z0-9_\-]*\.tex')
+slides_sections2 := $(shell grep '\\input' week8_what_does_healthinsurance_do.tex | grep -v '%.*input' | grep -o 'sections/[A-Za-z0-9_\-]*\.tex')
 
-all: week8_riskadjustment_and_insurance.pdf
+all: week8_riskadjustment_and_insurance.pdf week8_what_does_healthinsurance_do.pdf
 
 week8_riskadjustment_and_insurance.pdf: week8_riskadjustment_and_insurance.tex $(slides_sections)
 	pdflatex $< 
@@ -10,6 +11,13 @@ week8_riskadjustment_and_insurance.pdf: week8_riskadjustment_and_insurance.tex $
 	rm $(addprefix $(basename $<),.snm .nav)
 	rm $(addprefix $(basename $<),.blg .bbl)
 
+week8_what_does_healthinsurance_do.pdf: week8_what_does_healthinsurance_do.tex $(slides_sections2)
+	pdflatex $< 
+	pdflatex $< 
+	pdflatex $< 
+	rm $(addprefix $(basename $<),.log .aux .out .toc)
+	rm $(addprefix $(basename $<),.snm .nav)
+	rm $(addprefix $(basename $<),.blg .bbl)
 
 #INPUT RECIPES
 input/:
