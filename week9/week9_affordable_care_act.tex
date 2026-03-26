@@ -1,0 +1,143 @@
+\documentclass[12pt,notes=hide,aspectratio=169,mathserif]{beamer}
+
+% PACKAGES
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{verbatim}
+\usepackage{booktabs}
+\usepackage{etoolbox}
+\usepackage{datetime}
+\usepackage{bm}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{twemojis}
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+\usepackage[normalem]{ulem}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing,arrows.meta,calc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    urlcolor=blue!70!black,
+    citecolor=blue!70!black
+}
+
+\DeclareMathOperator*{\argmin}{argmin}
+
+% CUSTOM DEFINITIONS
+\def\newblock{}
+\linespread{1.2}
+\definecolor{maroon}{RGB}{128,0,0}
+\definecolor{darkgraytext}{RGB}{60,60,60}
+\definecolor{pdfbanner}{RGB}{169,180,173}
+
+% TOP BANNER
+\setbeamertemplate{headline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=1ex,center]{bannercolor}%
+    \end{beamercolorbox}%
+  }%
+}
+\setbeamercolor{bannercolor}{bg=pdfbanner}
+
+% IDENTIFYING INFORMATION
+\title{\small{EC 387 - Health Economics}\\
+\large
+\textbf{The Affordable Care Act}}
+\author[Mourot]{
+Professor Pauline Mourot \\
+{\scriptsize{Boston University}}
+}
+\date{\monthname[\the\month] \the\year}
+
+% THEMATIC OPTIONS
+\setbeamercovered{transparent}
+\usecolortheme[named=maroon]{structure}
+\setbeamercolor{progress bar}{fg=maroon}
+\setbeamertemplate{footline}[frame number]{}
+\setbeamercolor{itemize item}{fg=maroon}
+\setbeamercolor{itemize subitem}{fg=maroon}
+\setbeamercolor{itemize subsubitem}{fg=maroon}
+\setbeamertemplate{itemize subitem}{o}
+\setbeamertemplate{itemize subsubitem}{-}
+\setbeamerfont{subsection in toc}{size=\footnotesize}
+\setbeamerfont{subsection in toc}{size=\scriptsize}
+\setbeamerfont{frametitle}{size=\large}
+
+\beamertemplatenavigationsymbolsempty
+
+\AtBeginSection[] {
+\ifnumcomp{\value{section}}{=}{0}
+  {
+    \begin{frame}[noframenumbering,t]
+        \tableofcontents[sectionstyle=show/hide]
+        \noframenumbering
+    \end{frame}
+  }
+ {
+    \begin{frame}[noframenumbering]
+        \tableofcontents[currentsection]
+    \end{frame}
+  }
+}
+
+\AtBeginSubsection[]{
+   \begin{frame}[noframenumbering]
+        \tableofcontents[
+            currentsubsection,
+            sectionstyle=show/shaded,
+            subsectionstyle=show/shaded
+        ]
+   \end{frame}
+}
+
+\AtBeginSubsubsection[]
+{
+   \begin{frame}[noframenumbering]
+        \tableofcontents[
+            currentsubsection,
+            sectionstyle=show/shaded,
+            subsectionstyle=show/shaded
+        ]
+   \end{frame}
+}
+
+\newcommand\newbold[1]{\textcolor{maroon}{\textbf{#1}}}
+
+% BACKUP SLIDE NUMBERING
+\usepackage{appendixnumberbeamer}
+
+\usepackage{subfig}
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+\begin{document}
+
+\begin{frame}
+
+  \includegraphics[width=2cm]{../week8/input/BOSTON_UNIV_186-eps-converted-to.pdf}
+
+  \vspace{2cm}
+
+  {\fontsize{30}{32}\selectfont\bfseries\textcolor{maroon}{The Affordable Care Act}}\\[-0.25cm]
+
+  \textcolor{maroon}{\rule{\textwidth}{1.2pt}}\\[0.2cm]
+
+  {\large \textcolor{darkgraytext}{EC 387 -- Health Economics}}\\[0.1cm]
+  {\large \textcolor{darkgraytext}{Professor Pauline Mourot}}\\[1.3cm]
+
+\end{frame}
+
+\input{sections/affordable_care_act.tex}
+
+\end{document}
