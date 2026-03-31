@@ -1,6 +1,6 @@
 
 all: TFU_bank.pdf problem_set1_solutions.pdf problem_set1.pdf problem_set2_solutions.pdf problem_set2.pdf \
-	midterm1_solutions.pdf midterm1.pdf problem_set3_solutions.pdf problem_set3.pdf problem_set4_solutions.pdf problem_set4.pdf
+	midterm1_solutions.pdf midterm1.pdf midterm2_solution.pdf midterm2.pdf problem_set3_solutions.pdf problem_set3.pdf problem_set4_solutions.pdf problem_set4.pdf
 
 #TFU bank of questions with solutions
 TFU_bank.pdf: TFU_bank.tex
@@ -111,6 +111,26 @@ midterm1_solutions.pdf: midterm1_solutions.tex
 	rm $(addprefix $(basename $<),.log .aux .out .toc)
 	rm $(addprefix $(basename $<),.snm .nav)
 	rm $(addprefix $(basename $<),.blg .bbl)
+
+#MIDTERM 2
+midterm2.pdf: midterm2.tex
+	pdflatex $< 
+	pdflatex $< 
+	pdflatex $< 
+	rm -f $(addprefix $(basename $<),.log .aux .out .toc)
+	rm -f $(addprefix $(basename $<),.snm .nav)
+	rm -f $(addprefix $(basename $<),.blg .bbl)
+
+midterm2_solution.tex: midterm2.tex
+	cat $< | sed 's/togglefalse{solutions}/toggletrue{solutions}/' > $@
+
+midterm2_solution.pdf: midterm2_solution.tex
+	pdflatex $< 
+	pdflatex $< 
+	pdflatex $< 
+	rm -f $(addprefix $(basename $<),.log .aux .out .toc)
+	rm -f $(addprefix $(basename $<),.snm .nav)
+	rm -f $(addprefix $(basename $<),.blg .bbl)
 
 #INPUT RECIPES
 input/:
