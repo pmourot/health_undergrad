@@ -1,0 +1,528 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\usepackage{xcolor}
+\usepackage{etoolbox}  %Supports toggle commands
+\definecolor{darkblue}{RGB}{0,0,139}
+
+%SETTINGS
+\newtoggle{solutions} \togglefalse{solutions}
+
+\begin{document}
+
+\begin{center}
+\textbf{Midterm Exam 2} \\
+Introduction to Health Economics: EC 387 \\
+Boston University \\
+Spring 2026 \\
+Professor Pauline Mourot
+\end{center}
+
+\vspace{1em}
+
+\begin{itemize}
+  \item  \textbf{Please write your answers directly on the exam.}
+
+  \item The exam is scheduled for 75 minutes. There are a total of 100 possible points on the exam.  
+
+  \item This exam contains 2 parts. Part I contains 12 true/false/uncertain questions. Part II contains one exercise with questions a) to f).
+  
+  \item There are 12 pages in total for the exam, and 5 more pages for extra space. \textbf{Make sure you did not forget any question.}
+
+  \item This is a closed-book, closed-note exam. You may use a calculator.
+
+  \item If you use separate pieces of paper, please carefully number your answers so that it is clear which question you are answering.  
+
+  \item \textbf{Please read the instructions carefully.}
+
+  \item \textbf{You may receive partial credit if you show your work.} An incorrect answer with no justification or explanation will likely receive no credit.
+\end{itemize}
+
+\vspace{80mm}
+
+(See next page)
+\clearpage
+
+\noindent \textbf{PART I: TRUE/FALSE/UNCERTAIN [60 points]}\\
+
+For each of the questions below, please explain your answer.
+The quality of the explanation is an important part of the grade for these problems and
+can also help you earn substantial partial credit.
+In answering each question, 1-3 sentences of explanation should be sufficient.
+
+\vspace{7mm}
+
+\noindent \textbf{QUESTION 1}\\
+In the Rotschild-Stiglitz model (1976), asymmetric information makes the sicker consumers worse-off when a separating equilibrium exists.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+FALSE – It makes the healthier consumers worse-off, because they are offered a less desirable insurance contract than in the perfect information case
+to make sure that the sicker consumers do not want to buy the healthier consumers' insurance contract.
+Sicker consumers exert an ``externality'' on healthier consumers, and this externality is negative here.
+
+\vspace{7mm}
+
+}}{\vspace{90mm}}
+
+
+\noindent \textbf{QUESTION 2}\\
+You can estimate the impact of health insurance on mortality by comparing the mortality rates of people with and without health insurance.
+
+    \iftoggle{solutions}{
+        { \color{darkblue}
+
+        \vspace{5mm}
+
+        FALSE. There is an issue of selection into health insurance, so people with and without health insurance are not comparable.
+        In particular, we expect people with health insurance to be sicker on average than people without health insurance,
+        which could lead to find a higher mortality rate among people with health insurance than among people without health insurance.
+        This would not be because health insurance increases mortality, but because people with health insurance are sicker on average than people without health insurance.
+        To address this issue, we need to use a research design that allows us to compare people with and without health insurance who are similar in terms of their health status.
+        We have seen in class that RCTs, difference-in-difference approaches, regression discontinutity designs, or instrumental variable approaches can be used to address this issue of selection into health insurance
+        and to estimate the causal impact of health insurance on mortality.
+
+        \vspace{7mm}
+        
+    }}{\vspace{80mm}
+    
+    \clearpage}
+
+\noindent \textbf{QUESTION 3}\\
+A research study by Garthwaite, Gross, and Notowidigdo (2018) found that, after that a change in policy increased the number of uninsured patients in Tennessee,
+hospitals in Tennessee had higher costs and lower profit margins than hospitals in neighboring states that were not affected by the policy,
+which supports the ``cost-shifting'' hypothesis.
+
+    \iftoggle{solutions}{
+        { \color{darkblue}
+
+        \vspace{5mm}
+
+        FALSE. In their paper ``Hospitals as Insurers of Last Resort'', Garthwaite, Gross, and Notowidigdo (2018) investigated wether hospitals had higher costs and different profit margins when the rate of uninsured patients was higher.
+        They notably investigated this question by looking at the impact of enrollment cuts in TennCare, the state Medicaid program in Tennessee, which led to an increase in the number of uninsured patients in Tennessee.
+        They found that hospitals that were more affected by the cuts had higher costs and lower profit margins than hospitals that were less affected by the cuts.
+        The decrease in profit margins is not consistent with the cost-shifting hypothesis,
+        which predicts that hospitals would increase their prices for insured patients to compensate for the increase in uninsured patients so that their profits would remain similar to before the policy.
+        
+        \vspace{7mm}
+    }}{\vspace{90mm}}
+
+
+
+\noindent \textbf{QUESTION 4}\\
+The main reason for why there remain uninsured people in the United States is that hospitals have to provide care for people, irrespective of their insurance status.
+
+    \iftoggle{solutions}{
+        { \color{darkblue}
+      \vspace{5mm}
+
+        FALSE/UNCERTAIN. We have seen in class that there are several reasons for why there remain uninsured people in the United States, and the fact that hospitals have to provide care for people, irrespective of their insurance status, is not the only reason.   
+        The Emergency Medical Treatment and Labor Act (EMTALA) requires hospitals to provide care to all patients, regardless of their insurance status, but this covers only emergencies and only applies up to stabilization.
+        The fact that hospitals are often non-profits and that doctors have medical ethics may also mean that patients receive care even if they are uninsured.
+        However, we have discussed many other reasons for why there remain uninsured people in the United States.
+        This includes the gap in subsidies on the market exchanges for people below the 100\% of the federal poverty line who reside in states that have not expanded Medicaid eligibility after the ACA,
+        the fact that some part of the population, in particular very poor adults, seem to have a very low willingness to pay for health insurance that is below the cost to providing them insurance,
+        or the fact that there are information and behavioral frictions.
+
+        \vspace{7mm}
+    }}{\vspace{80mm}
+    
+    \clearpage}
+
+\noindent \textbf{QUESTION 5}\\
+Though health insurance market could theoretically unravel, there is no evidence that this happened in practice in the United States.
+
+    \iftoggle{solutions}{
+      \vspace{5mm}
+        { \color{darkblue}
+
+        FALSE. We have seen the example of the ``Harvard death spiral'', which is an example of a health insurance market unraveling in practice in the United States.
+
+        \vspace{7mm}
+    }}{\vspace{90mm}}
+
+
+\noindent \textbf{QUESTION 6}\\
+After the implementation of the Affordable Care Act, the proportion of people that purchased health insurance through their employers decreased, because employers know knew that their employees could purchase insurance on the health insurance marketplaces.
+
+    \iftoggle{solutions}{
+        { \color{darkblue}
+
+        \vspace{5mm}
+
+        FALSE. The share of people that purchased health insurance through their employers remained relatively stable after the implementation of the Affordable Care Act.
+        The health insurance marketplaces were designed to be a complement to employer-sponsored insurance in helping people whose employers do not offer insurance or people without jobs to purchase health insurance at decent prices and conditions,
+        and not a substitute to employer-sponsored insurance
+        The ACA included an employer mandate that requires employers with 50 or more full-time employees to offer health insurance to their employees.
+
+        \vspace{7mm}
+
+    }}{\vspace{80mm}
+    
+    \clearpage}
+
+
+\noindent \textbf{QUESTION 7}\\
+The Affordable Care Act ended up being a ``regressive'' policy, i.e., a policy that added a larger burden on low-income individuals,
+because the individual mandate applied to everyone, irrespective of income.
+
+    \iftoggle{solutions}{
+        { \color{darkblue}
+
+        \vspace{5mm}
+
+        FALSE/UNCERTAIN. While the individual mandate applied to everyone, irrespective of income, the ACA included a system of subsidies that made health insurance more affordable for low-income individuals and that made the policy progressive overall.
+        This included both premium subsidies but also cost-sharing subsidies that increased as income decreased.
+
+        \vspace{7mm}
+
+    }}{\vspace{90mm}}
+
+\noindent \textbf{QUESTION 8}\\
+The fact that some health insurance plans exclude certain drugs or treatments from their coverage can be explained by the existence of adverse selection.
+
+    \iftoggle{solutions}{
+        { \color{darkblue}
+
+        \vspace{5mm}
+
+        TRUE. Adverse selection occurs when individuals with higher health risks are more likely to purchase insurance, leading insurers to exclude certain drugs or treatments to manage costs to avoid high-cost consumers.
+        The Rotschild-Stiglitz model (1976) shows that in the presence of adverse selection, insurers may offer different contracts to different types of consumers, and some contracts may be less attractive to avoid high-risk consumers.
+        We also saw a research paper that provided real-world evidence of this in the ACA health insurance exchanges (Geruso, Layton, and Prinz 2019) looking at what drugs were covered or not in health insurance drug formularies.
+
+        \vspace{7mm}
+
+    }}{\vspace{80mm}
+    
+    \clearpage}
+
+\noindent \textbf{QUESTION 9}\\
+Asymmetric information in insurance markets
+(such as when consumers know more about their medical expenditure risks than insurers)
+always leads to unraveling in insurance markets and uninsured individuals.
+
+\iftoggle{solutions}{
+{ \color{darkblue}
+
+\vspace{5mm}
+
+FALSE/UNCERTAIN. 
+If risk aversion is strong, the risk premium could be high enough so that all consumers would be willing to buy insurance,
+and there would be no unravelling.
+Unraveling depends on the extent of adverse selection and risk aversion.
+
+\vspace{7mm}
+
+}}{\vspace{90mm}}
+
+\noindent \textbf{QUESTION 10}\\
+Risk-adjustment can be used to reduce incentives to ``cream skim'' consumers for health insurers.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+TRUE. ``Cream skimming'' occurs when health insurers try to attract healthier or deter high-risk consumers with contract features,
+and risk-adjustment is one way to try to prevent it by making higher-risk and low risk-consumers more equally profitable for insurers.
+
+\vspace{7mm}
+
+\clearpage
+
+}}{\vspace{80mm}
+
+\clearpage}
+
+\noindent \textbf{QUESTION 11}\\
+Research shows that health insurance has no impact on mortality because patients can access care regardless of insurance status.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+FALSE. While patients could rely on the Emergency Medical Treatment and Labor Act (EMTALA), non-profits statuses of hospitals, and medical ethics to access care under some circumstances,
+we have seen in class that there exist solid evidence that health insurance has a significant impact on mortality.
+This evidence includes the results from the IRS letters experiment (Goldin, Lurie, and McCubbin (2021)) or the study of the impact of health insurance on patient outcomes in the case of health crisis (Card, Dobkin, Maestas (2009)) that we detailed in class.
+
+\vspace{7mm}
+
+}}{\vspace{90mm}}
+
+\noindent \textbf{QUESTION 12}\\
+The Medicaid expansions under the Affordable Care Act were not implemented everywhere because of funding constraints.
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+\vspace{5mm}
+
+FALSE. The Medicaid expansions under the Affordable Care Act were not implemented everywhere because of a Supreme Court decision in 2012 that made the Medicaid expansion optional for states, and not because of funding constraints.
+Some states decided not to expand (10 states as of today).
+
+\vspace{7mm}
+
+}}{\vspace{100mm}}
+
+
+(See next page)
+\newpage
+
+\noindent \textbf{PART II: Quantitative Exercise}\\
+
+\vspace{5mm}
+
+\noindent \textbf{Exercise [40 points]}\\
+
+A monopolist insurer is selling a full insurance contract and faces the following market-level demand curve:
+
+\begin{equation*}
+P = 3015 - 3Q
+\end{equation*}
+
+where $Q$ is the number of consumers who decide to purchase insurance given the premium $P$.
+
+There are 1000 consumers in the market, and the monopolist insurer's marginal cost curve is given by
+
+\begin{equation*}
+MC = 1000 - 0.5Q,
+\end{equation*}
+
+and the insurer's total cost curve is given by
+
+\begin{equation*}
+TC(Q) = 1000Q - 0.25Q^2.
+\end{equation*}
+
+\vspace{3mm}
+
+\begin{enumerate}
+  \item[(a).] Graph both the demand curve and marginal cost curve on the same axes (indicate the intersections with the y-axis and any relevant points on the graph).
+  Which curve lies above the other curve (compute intersection if it exists)? Explain intuitively what this means (relative positions of the curves) in 1--3 sentences.
+  % 10 pt total
+  % 2pt demand, 2point mc graph
+  % 3 pt for finding intersection
+  % 3 points for intuition 
+
+  \textit{[Note: Both curves stop at $Q = 1000$ since there are only 1000 consumers in this market.]}
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+Set demand equal to marginal cost to find the intersection:
+\begin{align*}
+3015 - 3Q &= 1000 - 0.5Q \\
+2015 &= 2.5Q \\
+Q &= 806
+\end{align*}
+
+The curves intersect at $Q = 806$. Therefore, for $Q < 806$, the demand curve lies above the marginal cost curve, and for $Q > 806$, the demand curve lies below the marginal cost curve.
+Intuitively, the vertical distance between the two curves represents the risk premium. To the left of the intersection, consumers are willing to pay more than their marginal cost, while to the right of the intersection, consumers are willing to pay less than their marginal cost.
+}}{\vspace{250mm}}
+
+  \item[(b).] Assume the monopolist chooses to maximize profits given the demand and marginal cost curves defined above. What is the optimal profit-maximizing quantity and price that the monopolist will choose?
+  % 10 pt total
+  % 4 pt for MR curve
+  % 6 pt for solving equality (2pt quantity, 2 pt price, ,2 points setting up equation)
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+First compute the marginal revenue curve. Total revenue is
+\begin{equation*}
+TR = P \times Q = (3015 - 3Q)Q = 3015Q - 3Q^2
+\end{equation*}
+so marginal revenue is
+\begin{align*}
+MR &= \frac{\partial TR}{\partial Q}\\
+&=3015 - 6Q.
+\end{align*}
+
+Now set marginal revenue equal to marginal cost:
+\begin{align*}
+3015 - 6Q &= 1000 - 0.5Q \\
+2015 &= 5.5Q \\
+Q &= 366.36 \approx 366.
+\end{align*}
+
+The optimal price is therefore
+\begin{equation*}
+P = 3015 - 3(366) = 1917.
+\end{equation*}
+}}{\vspace{180mm}
+
+\clearpage}
+
+  \item[(c).] What are the monopolist's profits at the optimal quantity and price? Add them to the graph you drew in part (a) in addition to deriving the equilibrium.
+
+    % 5 pt total
+    % 3 pts computing profits
+    % 2 pts putting it on graph
+
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+Profits equal total revenue minus total cost:
+\begin{equation*}
+\Pi = TR - TC.
+\end{equation*}
+
+At the optimum,
+\begin{equation*}
+TR = 1917 \times 366
+\end{equation*}
+and
+total cost is
+\begin{align*}
+  TC(Q) &= \int_0^Q MC(Q) dQ \\
+  &= \int_0^Q (1000 - 0.5Q) dQ \\
+  &= 1000Q - 0.25Q^2.
+\end{align*}
+At the optimal quantity of $Q = 366$, total cost is
+\begin{equation*}
+TC = 1000 \times 366 - 0.25 \times 366^2.
+\end{equation*}
+
+Therefore,
+\begin{equation*}
+\Pi = 1917 \times 366 - \left(1000 \times 366 - 0.25 \times 366^2\right) = 369{,}111.
+\end{equation*}
+}}{
+  \vspace{90mm}}
+
+  \item[(d).] Calculate the average cost for those who choose to buy insurance at the monopoly price and the average cost for those who choose not to buy insurance from the monopolist. Which is larger? Why? Explain intuitively in 1--3 sentences.
+
+    % 5 pt total
+    % 3 pts AC insured
+    % 2 pts AC not insured
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+Average cost for those who buy insurance is
+\begin{equation*}
+AC(\text{insured}) = \frac{TC}{Q} = \frac{1000 \times 366 - 0.25 \times 366^2}{366} = 908.5.
+\end{equation*}
+
+For those who do not buy insurance, marginal cost tells us the cost of each additional uninsured person. Since $MC$ is linear, average cost is the average of the first and last uninsured person's marginal costs:
+\begin{equation*}
+AC(\text{not insured}) = \frac{MC(367) + MC(1000)}{2} = 658.25.
+\end{equation*}
+
+Thus,
+\begin{equation*}
+AC(\text{insured}) > AC(\text{not insured}).
+\end{equation*}
+
+Intuitively, this is adverse selection: the consumers who buy insurance are the higher-cost consumers, while the lower-cost consumers remain uninsured.
+}}{\vspace{110mm}}
+
+
+  \item[(e).] Would perfect competition lead to the efficient equilibrium here? Explain intuitively in 1--3 sentences.
+
+    % 5 pt total
+    % 2pt for price lower and quantity higher
+    % 3 pts for AC above MC so intersection before
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+With perfect competition,
+the equilibrium would be such that profits are equal to zero,
+which implies that the perfect competition equilibrium would be at the intersection of the demand curve and the average cost curve (price equals average cost).
+This would lead to a higher quantity of insurance sold and a lower price than in the monopoly case,
+but we would not reach the efficient outcome where price equals marginal cost because of the presence of adverse selection which makes the average cost curve lie above the marginal cost curve.
+Showing this in the graph is helpful and accepted.
+
+}}{\vspace{90mm}}
+
+  \item[(f).] We are back to the monopolist case.
+  Suppose that the government decides to subsidize insurance by giving consumers a 20 percent tax subsidy, so that consumers only have to pay 80 percent of the price of insurance (and the government pays the rest of the cost).
+  How does the monopolist in this model respond? What happens to the monopolist's profits and the price for consumers (both the gross price and the price net of the subsidy)? What happens to the number of consumers who end up purchasing insurance?
+
+  \textit{[Note: You do not need to do any calculations, although you can if you would like. In either case, please explain your answer intuitively in words and/or figures.]}
+
+    % 5 pt total
+    % 3pt higher demand, higher gross price but higher demand because lower net price.
+    % 3 pts for AC above MC so intersection before
+
+\iftoggle{solutions}{
+{\color{darkblue}
+
+The subsidy shifts the effective demand curve outward because consumers now pay only 80 percent of the gross price. As a result, the monopolist responds by increasing the gross price and selling insurance to more consumers. The net price paid by consumers falls relative to the no-subsidy case, even though the gross price rises.
+
+The monopolist's profits increase because both the gross price and quantity sold rise. Therefore, with the subsidy, more consumers purchase insurance, the firm's profits rise, the gross price rises, and the net-of-subsidy price paid by consumers falls.
+
+If you work through the algebra, the new demand curve becomes
+\begin{equation*}
+P = 3768.75 - 3.75Q,
+\end{equation*}
+which implies
+\begin{equation*}
+MR = 3768.75 - 7.5Q.
+\end{equation*}
+Setting this equal to marginal cost yields
+\begin{equation*}
+Q \approx 395,
+\end{equation*}
+with gross price
+\begin{equation*}
+P \approx 2287.5,
+\end{equation*}
+and net consumer price
+\begin{equation*}
+0.8 \times 2287.5 = 1830.
+\end{equation*}
+This is lower than the original consumer price of $1917$, so insurance coverage increases.
+}}{\vspace{150mm}}
+\end{enumerate}
+
+\iftoggle{solutions}{}{
+
+
+\clearpage
+
+\vspace*{\fill}
+\begin{center}
+[END OF EXAM]
+\end{center}
+
+\clearpage
+
+\begin{center}
+[Additional space page 1]
+\end{center}
+
+\clearpage
+
+\begin{center}
+[Additional space page 2]
+\end{center}
+
+\clearpage
+
+\begin{center}
+[Additional space page 3]
+\end{center}
+
+\clearpage
+
+\begin{center}
+[Additional space page 4]
+\end{center}
+\clearpage
+
+\begin{center}
+[Additional space page 5]
+\end{center}
+
+}
+\end{document}
